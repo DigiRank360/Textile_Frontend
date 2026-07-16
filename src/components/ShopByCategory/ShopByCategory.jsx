@@ -32,7 +32,7 @@ const ShopByCategory = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-[#2B2420] mb-3">
-             Properties
+             New Products
           </h2>
           <p className="text-[#6b6156] text-base max-w-md mx-auto">
             Explore our premium properties.

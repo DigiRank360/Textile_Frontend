@@ -132,7 +132,7 @@ const Footer = () => {
               <address className="not-italic flex flex-col gap-3.5">
                 <div className="flex items-start gap-2.5 text-sm text-[#b6a794]">
                   <MapPin size={16} className="flex-shrink-0 mt-0.5 text-[#c9a227]" />
-                  <span>123 Fragrance Lane, Varanasi, UP 221001</span>
+                  <span>A-182 ENGLISH VILLAS KOLAR ROAD BHOPAL-462042</span>
                 </div>
                 <div className="flex items-start gap-2.5 text-sm text-[#b6a794]">
                   <Phone size={16} className="flex-shrink-0 mt-0.5 text-[#c9a227]" />
