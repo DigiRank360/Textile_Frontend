@@ -1,0 +1,4 @@
+@import "./styles/home.css";
+
+/* Admin panel uses its own styles — frontend uses home.css theme */
+@import "tailwindcss";
