@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import API_URL from '../config/config';
+import API_URL, { getImageUrl } from '../config/config';
 
 const FeaturedProducts = () => {
   const [products, setProducts] = useState([]);
@@ -62,7 +62,7 @@ const FeaturedProducts = () => {
                 <img
                   src={
                     product.images?.length
-                      ? `${API_URL}${product.images[0]}`
+                      ? getImageUrl(product.images[0])
                       : "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600"
                   }
                   alt={product.title}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import API_URL from "../config/config";
+import API_URL, { getImageUrl } from "../config/config";
 
 const ShopByCategory = () => {
   const [properties, setProperties] = useState([]);
@@ -64,7 +64,7 @@ const ShopByCategory = () => {
                   <img
                     src={
                       property.images?.length
-                        ? `${API_URL}${property.images[0]}`
+                        ? getImageUrl(property.images[0])
                         : "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600"
                     }
                     alt={property.title}

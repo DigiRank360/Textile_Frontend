@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ChevronRight, Minus, Plus, ShoppingBag, ImageOff } from "lucide-react";
-import API_URL from "../components/config/config";
+import API_URL, { getImageUrl } from "../components/config/config";
 import Header from "../components/Header/Header";
 import PageHero from "../components/PageHero/PageHero";
 import "../components/PageHero/PageSections.css";
@@ -97,7 +97,7 @@ const PropertyDetails = () => {
   }
 
   const images = property.images?.length
-    ? property.images.map((img) => `${API_URL}${img}`)
+    ? property.images.map(getImageUrl)
     : ["https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600"];
 
   return (

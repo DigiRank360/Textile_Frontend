@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Eye, PackageOpen, AlertCircle } from "lucide-react";
-import API_URL from "../components/config/config";
+import API_URL, { getImageUrl } from "../components/config/config";
 import PageHero from "../components/PageHero/PageHero";
 
 const Products = () => {
@@ -91,7 +91,7 @@ const Products = () => {
                     <img
                       src={
                         product.images?.length
-                          ? `${API_URL}${product.images[0]}`
+                          ? getImageUrl(product.images[0])
                           : "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600"
                       }
                       alt={product.title}
