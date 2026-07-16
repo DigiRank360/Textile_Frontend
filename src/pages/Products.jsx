@@ -12,11 +12,21 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
+        console.log("API URL:", `${API_URL}/api/properties`);
+
         const res = await fetch(`${API_URL}/api/properties`);
         const data = await res.json();
-        if (data.success) setProducts(data.properties);
-        else setError(data.message || "Unable to load products.");
+
+        console.log("Response:", data);
+
+        if (data.success) {
+          console.log("Products:", data.properties);
+          setProducts(data.properties);
+        } else {
+          setError(data.message || "Unable to load products.");
+        }
       } catch (err) {
+        console.error(err);
         setError(err.message || "Server error.");
       } finally {
         setLoading(false);
@@ -24,6 +34,8 @@ const Products = () => {
     };
     fetchProducts();
   }, []);
+
+  console.log("Products State:", products);
 
   return (
     <>
@@ -35,7 +47,6 @@ const Products = () => {
 
       <main className="bg-white pt-14 pb-20">
         <div className="max-w-[1200px] mx-auto px-6">
-
           {loading ? (
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
               {Array.from({ length: 8 }).map((_, i) => (
@@ -51,7 +62,9 @@ const Products = () => {
               <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#c9a227]/10 text-[#c9a227] mb-4">
                 <AlertCircle size={24} />
               </div>
-              <p className="text-[#241611] font-medium mb-1">Something went wrong</p>
+              <p className="text-[#241611] font-medium mb-1">
+                Something went wrong
+              </p>
               <p className="text-[#8a7c6a] text-sm">{error}</p>
             </div>
           ) : products.length === 0 ? (
@@ -59,8 +72,12 @@ const Products = () => {
               <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#241611]/5 text-[#8a7c6a] mb-4">
                 <PackageOpen size={24} />
               </div>
-              <p className="text-[#241611] font-medium mb-1">No products available</p>
-              <p className="text-[#8a7c6a] text-sm">Check back soon — new items are on their way.</p>
+              <p className="text-[#241611] font-medium mb-1">
+                No products available
+              </p>
+              <p className="text-[#8a7c6a] text-sm">
+                Check back soon — new items are on their way.
+              </p>
             </div>
           ) : (
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
