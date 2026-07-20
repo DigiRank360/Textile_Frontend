@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero/Hero';
 import ShopByCategory from '../components/ShopByCategory/ShopByCategory';
-import FeaturedProducts from '../components/FeaturedProducts/FeaturedProducts';
+// import FeaturedProducts from '../components/FeaturedProducts/FeaturedProducts';
 import BrandStory from '../components/BrandStory/BrandStory';
 // import MostLovedRituals from '../components/MostLovedRituals/MostLovedRituals';
 import SacredProcess from '../components/SacredProcess/SacredProcess';
@@ -12,7 +12,7 @@ function Home() {
     <>
       <Hero />
       <ShopByCategory />
-      <FeaturedProducts />
+      {/* <FeaturedProducts /> */}
       <BrandStory />
       {/* <MostLovedRituals /> */}
       <SacredProcess />

@@ -11,10 +11,12 @@ import Contact from './pages/Contact';
 import About from './components/About/About';
 import MainLayout from './layouts/MainLayout';
 import PropertyDetails from "./pages/PropertyDetails";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+        <ScrollToTop />
       <MainLayout>
         <Routes>
           <Route path="/" element={<Home />} />
