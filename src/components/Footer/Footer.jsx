@@ -1,48 +1,46 @@
-import React, { useState } from 'react';
-import { MapPin, Phone, Mail, ArrowUp, Send } from 'lucide-react';
-import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
-import logo from '../../assets/images/logo.png';
+import React, { useState } from "react";
+import { MapPin, Phone, Mail, ArrowUp, Send } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import logo from "../../assets/images/logo.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
   const shopLinks = [
-    { label: 'All Products', href: '/products' },
-    { label: 'Categories', href: '/categories' },
-    { label: 'About Us', href: '/about' },
-    { label: 'Contact', href: '/contact' },
-   
+    { label: "All Products", href: "/products" },
+    { label: "Categories", href: "/categories" },
+    { label: "About Us", href: "/about" },
+    { label: "Contact", href: "/contact" },
   ];
 
   const careLinks = [
-    { label: 'My Account', href: '/login' },
-    { label: 'Track Order', href: '#' },
-    { label: 'Shipping & Returns', href: '#' },
-    { label: 'FAQs', href: '#' },
-    { label: 'Contact Us', href: '#' },
+    { label: "My Account", href: "/login" },
+    { label: "Track Order", href: "#" },
+    { label: "Shipping & Returns", href: "#" },
+    { label: "FAQs", href: "#" },
+    { label: "Contact Us", href: "#" },
   ];
 
   const legalLinks = [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms & Conditions', href: '#' },
-    { label: 'Shipping Policy', href: '#' },
+    { label: "Privacy Policy", href: "#" },
+    { label: "Terms & Conditions", href: "#" },
+    { label: "Shipping Policy", href: "#" },
   ];
 
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   const handleSubscribe = (e) => {
     e.preventDefault();
     if (!email.trim()) return;
     setSubscribed(true);
-    setEmail('');
+    setEmail("");
   };
 
   return (
     <>
       <footer className="bg-[#1a221a] text-[#e9dfd2]" id="footer">
         <div className="max-w-[1200px] mx-auto px-6 pt-16 pb-8">
-
           {/* Newsletter band */}
           <div className="flex items-center justify-between gap-8 flex-wrap pb-12 mb-12 border-b border-[#e9dfd2]/10">
             <div>
@@ -50,11 +48,15 @@ const Footer = () => {
                 Join our circle
               </h4>
               <p className="text-sm text-[#b6a794] max-w-[420px]">
-                Get early access to new fragrances, festival collections, and rituals — no spam, ever.
+                Get early access to new fragrances, festival collections, and
+                rituals — no spam, ever.
               </p>
             </div>
 
-            <form onSubmit={handleSubscribe} className="flex flex-shrink-0 w-full sm:w-auto">
+            <form
+              onSubmit={handleSubscribe}
+              className="flex flex-shrink-0 w-full sm:w-auto"
+            >
               <input
                 type="email"
                 required
@@ -89,24 +91,41 @@ const Footer = () => {
                 Experience the divine fragrance of nature with every ritual.
               </p>
               <div className="flex gap-2.5">
-  <a href="#" aria-label="Facebook" className="flex items-center justify-center w-9 h-9 rounded-full bg-[#e9dfd2]/[0.08] text-[#e9dfd2] hover:bg-[#c9a227] hover:text-[#241611] hover:-translate-y-0.5 transition-all">
-    <FaFacebookF size={14} />
-  </a>
-  <a href="#" aria-label="Instagram" className="flex items-center justify-center w-9 h-9 rounded-full bg-[#e9dfd2]/[0.08] text-[#e9dfd2] hover:bg-[#c9a227] hover:text-[#241611] hover:-translate-y-0.5 transition-all">
-    <FaInstagram size={14} />
-  </a>
-  <a href="#" aria-label="YouTube" className="flex items-center justify-center w-9 h-9 rounded-full bg-[#e9dfd2]/[0.08] text-[#e9dfd2] hover:bg-[#c9a227] hover:text-[#241611] hover:-translate-y-0.5 transition-all">
-    <FaYoutube size={14} />
-  </a>
-</div>
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  className="flex items-center justify-center w-9 h-9 rounded-full bg-[#e9dfd2]/[0.08] text-[#e9dfd2] hover:bg-[#c9a227] hover:text-[#241611] hover:-translate-y-0.5 transition-all"
+                >
+                  <FaFacebookF size={14} />
+                </a>
+                <a
+                  href="#"
+                  aria-label="Instagram"
+                  className="flex items-center justify-center w-9 h-9 rounded-full bg-[#e9dfd2]/[0.08] text-[#e9dfd2] hover:bg-[#c9a227] hover:text-[#241611] hover:-translate-y-0.5 transition-all"
+                >
+                  <FaInstagram size={14} />
+                </a>
+                <a
+                  href="#"
+                  aria-label="YouTube"
+                  className="flex items-center justify-center w-9 h-9 rounded-full bg-[#e9dfd2]/[0.08] text-[#e9dfd2] hover:bg-[#c9a227] hover:text-[#241611] hover:-translate-y-0.5 transition-all"
+                >
+                  <FaYoutube size={14} />
+                </a>
+              </div>
             </div>
 
             <div>
-              <h4 className="text-[13px] font-semibold tracking-wider uppercase text-[#c9a227] mb-4.5">Quick Links</h4>
+              <h4 className="text-[13px] font-semibold tracking-wider uppercase text-[#c9a227] mb-4.5">
+                Quick Links
+              </h4>
               <ul className="flex flex-col gap-3">
                 {shopLinks.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="text-sm text-[#b6a794] hover:text-[#f2e9dc] hover:pl-1 transition-all">
+                    <a
+                      href={link.href}
+                      className="text-sm text-[#b6a794] hover:text-[#f2e9dc] hover:pl-1 transition-all"
+                    >
                       {link.label}
                     </a>
                   </li>
@@ -115,11 +134,16 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4 className="text-[13px] font-semibold tracking-wider uppercase text-[#c9a227] mb-4.5">Customer Care</h4>
+              <h4 className="text-[13px] font-semibold tracking-wider uppercase text-[#c9a227] mb-4.5">
+                Customer Care
+              </h4>
               <ul className="flex flex-col gap-3">
                 {careLinks.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="text-sm text-[#b6a794] hover:text-[#f2e9dc] hover:pl-1 transition-all">
+                    <a
+                      href={link.href}
+                      className="text-sm text-[#b6a794] hover:text-[#f2e9dc] hover:pl-1 transition-all"
+                    >
                       {link.label}
                     </a>
                   </li>
@@ -128,19 +152,40 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4 className="text-[13px] font-semibold tracking-wider uppercase text-[#c9a227] mb-4.5">Contact</h4>
+              <h4 className="text-[13px] font-semibold tracking-wider uppercase text-[#c9a227] mb-4.5">
+                Contact
+              </h4>
               <address className="not-italic flex flex-col gap-3.5">
                 <div className="flex items-start gap-2.5 text-sm text-[#b6a794]">
-                  <MapPin size={16} className="flex-shrink-0 mt-0.5 text-[#c9a227]" />
+                  <MapPin
+                    size={16}
+                    className="flex-shrink-0 mt-0.5 text-[#c9a227]"
+                  />
                   <span>A-182 ENGLISH VILLAS KOLAR ROAD BHOPAL-462042</span>
                 </div>
                 <div className="flex items-start gap-2.5 text-sm text-[#b6a794]">
-                  <Phone size={16} className="flex-shrink-0 mt-0.5 text-[#c9a227]" />
-                  <a href="tel:+919876543210" className="hover:text-[#f2e9dc] transition-colors">+91 98765 43210</a>
+                  <Phone
+                    size={16}
+                    className="flex-shrink-0 mt-0.5 text-[#c9a227]"
+                  />
+                  <a
+                    href="tel:+919876543210"
+                    className="hover:text-[#f2e9dc] transition-colors"
+                  >
+                   +919981997440
+                  </a>
                 </div>
                 <div className="flex items-start gap-2.5 text-sm text-[#b6a794]">
-                  <Mail size={16} className="flex-shrink-0 mt-0.5 text-[#c9a227]" />
-                  <a href="mailto:hello@dhoopandco.com" className="hover:text-[#f2e9dc] transition-colors">hello@dhoopandco.com</a>
+                  <Mail
+                    size={16}
+                    className="flex-shrink-0 mt-0.5 text-[#c9a227]"
+                  />
+                  <a
+                    href="info@eagleincensesticks.com"
+                    className="hover:text-[#f2e9dc] transition-colors"
+                  >
+                    info@eagleincensesticks.com
+                  </a>
                 </div>
               </address>
             </div>
@@ -154,7 +199,11 @@ const Footer = () => {
             </p>
             <div className="flex gap-6">
               {legalLinks.map((link) => (
-                <a key={link.label} href={link.href} className="text-[13px] text-[#8a7c6a] hover:text-[#e9dfd2] transition-colors">
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-[13px] text-[#8a7c6a] hover:text-[#e9dfd2] transition-colors"
+                >
                   {link.label}
                 </a>
               ))}
