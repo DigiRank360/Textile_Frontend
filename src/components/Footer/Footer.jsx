@@ -4,8 +4,11 @@ import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import logo from "../../assets/images/logo.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
 
   const shopLinks = [
     { label: "All Products", href: "/products" },
@@ -30,11 +33,48 @@ const Footer = () => {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault();
-    if (!email.trim()) return;
-    setSubscribed(true);
-    setEmail("");
+
+    if (!email.trim()) {
+      setMessage("Please enter your email address.");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      setMessage("");
+      setSubscribed(false);
+
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/newsletter/subscribe`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: email.trim(),
+          }),
+        },
+      );
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || "Unable to subscribe");
+      }
+
+      setSubscribed(true);
+      setMessage(data.message || "You are subscribed successfully.");
+      setEmail("");
+    } catch (error) {
+      console.error("Subscription error:", error);
+      setSubscribed(false);
+      setMessage(error.message || "Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -62,18 +102,32 @@ const Footer = () => {
                 required
                 placeholder="Enter your email"
                 value={email}
+                disabled={loading}
                 onChange={(e) => setEmail(e.target.value)}
                 aria-label="Email address"
-                className="bg-[#e9dfd2]/[0.06] border border-[#e9dfd2]/20 border-r-0 text-[#f2e9dc] placeholder-[#8a7c6a] text-sm px-4 py-3 w-full sm:w-64 rounded-l outline-none focus:border-[#c9a227] transition-colors"
+                className="bg-[#e9dfd2]/[0.06] border border-[#e9dfd2]/20 border-r-0 text-[#f2e9dc] placeholder-[#8a7c6a] text-sm px-4 py-3 w-full sm:w-64 rounded-l outline-none focus:border-[#c9a227] disabled:opacity-60 transition-colors"
               />
+
               <button
                 type="submit"
-                className="flex items-center gap-2 bg-[#c9a227] hover:bg-[#dbb43a] text-[#241611] text-sm font-semibold px-5 py-3 rounded-r transition-colors"
+                disabled={loading}
+                className="flex items-center gap-2 bg-[#c9a227] hover:bg-[#dbb43a] disabled:opacity-60 disabled:cursor-not-allowed text-[#241611] text-sm font-semibold px-5 py-3 rounded-r transition-colors"
               >
-                <span>Subscribe</span>
-                <Send size={16} />
+                <span>{loading ? "Subscribing..." : "Subscribe"}</span>
+                {!loading && <Send size={16} />}
               </button>
             </form>
+
+            {message && (
+              <p
+                role="status"
+                className={`text-[13px] w-full ${
+                  subscribed ? "text-[#c9a227]" : "text-red-400"
+                }`}
+              >
+                {message}
+              </p>
+            )}
 
             {subscribed && (
               <p role="status" className="text-[13px] text-[#c9a227] w-full">
@@ -169,10 +223,10 @@ const Footer = () => {
                     className="flex-shrink-0 mt-0.5 text-[#c9a227]"
                   />
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+919981997440"
                     className="hover:text-[#f2e9dc] transition-colors"
                   >
-                   +919981997440
+                    +91 99819 97440
                   </a>
                 </div>
                 <div className="flex items-start gap-2.5 text-sm text-[#b6a794]">
@@ -181,7 +235,7 @@ const Footer = () => {
                     className="flex-shrink-0 mt-0.5 text-[#c9a227]"
                   />
                   <a
-                    href="info@eagleincensesticks.com"
+                    href="mailto:info@eagleincensesticks.com"
                     className="hover:text-[#f2e9dc] transition-colors"
                   >
                     info@eagleincensesticks.com
