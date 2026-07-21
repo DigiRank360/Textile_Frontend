@@ -3,6 +3,7 @@ import { Check, Leaf, Hand, Flame, Clock3, PackageCheck } from "lucide-react";
 import Header from "../Header/Header";
 import PageHero from "../PageHero/PageHero";
 import "../PageHero/PageSections.css";
+import about from "../../assets/images/about.png"
 
 const FEATURES = [
   "100% Natural Ingredients",
@@ -14,7 +15,7 @@ const FEATURES = [
 const STATS = [
   { value: "15+", label: "Years Experience" },
   { value: "5000+", label: "Happy Customers" },
-  { value: "100%", label: "Natural Products" },
+  { value: "100%", label: "Natural Products" }, 
 ];
 
 const PROCESS = [
@@ -76,7 +77,7 @@ const About = () => {
               <div className={`relative ${fade()}`}>
                 <div className="overflow-hidden rounded-3xl shadow-2xl">
                   <img
-                    src="https://m.media-amazon.com/images/I/616ooPgOAWL._AC_UF350,350_QL80_.jpg"
+                    src={about}
                     alt="Premium Incense"
                     className="h-[650px] w-full object-cover transition duration-700 hover:scale-105"
                   />
