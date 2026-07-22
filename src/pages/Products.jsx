@@ -8,9 +8,7 @@ import {
   RotateCcw,
 } from "lucide-react";
 
-import API_URL, {
-  getImageUrl,
-} from "../components/config/config";
+import API_URL, { getImageUrl } from "../components/config/config";
 
 import ShopLayout from "../components/ShopLayout";
 
@@ -27,8 +25,7 @@ const Products = () => {
   const [error, setError] = useState(null);
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] =
-    useState(categoryFromUrl);
+  const [selectedCategory, setSelectedCategory] = useState(categoryFromUrl);
 
   const [sortBy, setSortBy] = useState("newest");
 
@@ -61,9 +58,7 @@ const Products = () => {
          * Saare products ek baar fetch kar rahe hain.
          * Category filtering frontend par hogi.
          */
-        const response = await fetch(
-          `${API_URL}/api/properties`
-        );
+        const response = await fetch(`${API_URL}/api/properties`);
 
         if (!response.ok) {
           throw new Error("Unable to fetch products.");
@@ -74,27 +69,16 @@ const Products = () => {
         console.log("Products API response:", data);
 
         if (!data.success) {
-          throw new Error(
-            data.message || "Unable to load products."
-          );
+          throw new Error(data.message || "Unable to load products.");
         }
 
-        const productList =
-          data.properties ||
-          data.products ||
-          data.data ||
-          [];
+        const productList = data.properties || data.products || data.data || [];
 
-        setProducts(
-          Array.isArray(productList) ? productList : []
-        );
+        setProducts(Array.isArray(productList) ? productList : []);
       } catch (error) {
         console.error("Product fetch error:", error);
 
-        setError(
-          error.message ||
-            "Server error. Please try again."
-        );
+        setError(error.message || "Server error. Please try again.");
       } finally {
         setLoading(false);
       }
@@ -114,9 +98,7 @@ const Products = () => {
       try {
         setCategoryLoading(true);
 
-        const response = await fetch(
-          `${API_URL}/api/categories`
-        );
+        const response = await fetch(`${API_URL}/api/categories`);
 
         if (!response.ok) {
           throw new Error("Unable to fetch categories.");
@@ -124,16 +106,9 @@ const Products = () => {
 
         const data = await response.json();
 
-        const categoryList =
-          data.data ||
-          data.categories ||
-          [];
+        const categoryList = data.data || data.categories || [];
 
-        setCategories(
-          Array.isArray(categoryList)
-            ? categoryList
-            : []
-        );
+        setCategories(Array.isArray(categoryList) ? categoryList : []);
       } catch (error) {
         console.error("Category fetch error:", error);
         setCategories([]);
@@ -160,11 +135,7 @@ const Products = () => {
       return product.category;
     }
 
-    return (
-      product.category._id ||
-      product.category.id ||
-      ""
-    );
+    return product.category._id || product.category.id || "";
   };
 
   const getProductCategoryName = (product) => {
@@ -178,8 +149,7 @@ const Products = () => {
 
     const matchedCategory = categories.find(
       (category) =>
-        String(category._id || category.id) ===
-        String(product.category)
+        String(category._id || category.id) === String(product.category),
     );
 
     return matchedCategory?.name || "";
@@ -209,9 +179,7 @@ const Products = () => {
   const filteredProducts = useMemo(() => {
     let result = [...products];
 
-    const normalizedSearch = searchTerm
-      .trim()
-      .toLowerCase();
+    const normalizedSearch = searchTerm.trim().toLowerCase();
 
     if (normalizedSearch) {
       result = result.filter((product) => {
@@ -221,12 +189,9 @@ const Products = () => {
           ""
         ).toLowerCase();
 
-        const productDescription = (
-          product.description || ""
-        ).toLowerCase();
+        const productDescription = (product.description || "").toLowerCase();
 
-        const categoryName =
-          getProductCategoryName(product).toLowerCase();
+        const categoryName = getProductCategoryName(product).toLowerCase();
 
         return (
           productTitle.includes(normalizedSearch) ||
@@ -239,8 +204,7 @@ const Products = () => {
     if (selectedCategory) {
       result = result.filter(
         (product) =>
-          String(getProductCategoryId(product)) ===
-          String(selectedCategory)
+          String(getProductCategoryId(product)) === String(selectedCategory),
       );
     }
 
@@ -253,14 +217,8 @@ const Products = () => {
           );
 
         case "name-asc":
-          return (
-            firstProduct.title ||
-            firstProduct.name ||
-            ""
-          ).localeCompare(
-            secondProduct.title ||
-              secondProduct.name ||
-              ""
+          return (firstProduct.title || firstProduct.name || "").localeCompare(
+            secondProduct.title || secondProduct.name || "",
           );
 
         case "name-desc":
@@ -268,11 +226,7 @@ const Products = () => {
             secondProduct.title ||
             secondProduct.name ||
             ""
-          ).localeCompare(
-            firstProduct.title ||
-              firstProduct.name ||
-              ""
-          );
+          ).localeCompare(firstProduct.title || firstProduct.name || "");
 
         case "newest":
         default:
@@ -284,13 +238,7 @@ const Products = () => {
     });
 
     return result;
-  }, [
-    products,
-    categories,
-    searchTerm,
-    selectedCategory,
-    sortBy,
-  ]);
+  }, [products, categories, searchTerm, selectedCategory, sortBy]);
 
   /*
   |--------------------------------------------------------------------------
@@ -303,9 +251,7 @@ const Products = () => {
 
     setSelectedCategory(value);
 
-    const updatedParams = new URLSearchParams(
-      searchParams
-    );
+    const updatedParams = new URLSearchParams(searchParams);
 
     if (value) {
       updatedParams.set("category", value);
@@ -351,10 +297,7 @@ const Products = () => {
           <div>
             <p className="text-sm font-medium text-[#241611]">
               {filteredProducts.length}{" "}
-              {filteredProducts.length === 1
-                ? "product"
-                : "products"}{" "}
-              found
+              {filteredProducts.length === 1 ? "product" : "products"} found
             </p>
 
             {selectedCategory && (
@@ -379,20 +322,15 @@ const Products = () => {
 
       {loading ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-          {Array.from({ length: 6 }).map(
-            (_, index) => (
-              <div
-                key={index}
-                className="animate-pulse"
-              >
-                <div className="w-full aspect-[400/530] bg-[#241611]/8 rounded-2xl mb-3" />
+          {Array.from({ length: 6 }).map((_, index) => (
+            <div key={index} className="animate-pulse">
+              <div className="w-full aspect-[400/530] bg-[#241611]/8 rounded-2xl mb-3" />
 
-                <div className="h-4 bg-[#241611]/8 rounded w-3/4 mb-3" />
+              <div className="h-4 bg-[#241611]/8 rounded w-3/4 mb-3" />
 
-                <div className="h-10 bg-[#241611]/8 rounded-xl w-full" />
-              </div>
-            )
-          )}
+              <div className="h-10 bg-[#241611]/8 rounded-xl w-full" />
+            </div>
+          ))}
         </div>
       ) : error ? (
         <div className="flex flex-col items-center text-center py-20 rounded-2xl border border-[#241611]/10 bg-[#f5efe3]/40">
@@ -404,9 +342,7 @@ const Products = () => {
             Something went wrong
           </p>
 
-          <p className="text-[#8a7c6a] text-sm">
-            {error}
-          </p>
+          <p className="text-[#8a7c6a] text-sm">{error}</p>
         </div>
       ) : filteredProducts.length === 0 ? (
         <div className="flex flex-col items-center text-center py-20 rounded-2xl border border-[#241611]/10 bg-[#f5efe3]/40">
@@ -419,8 +355,8 @@ const Products = () => {
           </p>
 
           <p className="text-[#8a7c6a] text-sm max-w-sm">
-            Search text ya selected collection ko change
-            karke dobara try karein.
+            Search text ya selected collection ko change karke dobara try
+            karein.
           </p>
 
           {hasActiveFilters && (
@@ -438,12 +374,9 @@ const Products = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
           {filteredProducts.map((product) => {
             const productTitle =
-              product.title ||
-              product.name ||
-              "Untitled Product";
+              product.title || product.name || "Untitled Product";
 
-            const categoryName =
-              getProductCategoryName(product);
+            const categoryName = getProductCategoryName(product);
 
             return (
               <article
@@ -482,12 +415,10 @@ const Products = () => {
                 </Link>
 
                 <Link
-                  to={`/inquiry?productId=${
+                  to={`/contact?productId=${
                     product._id
-                  }&product=${encodeURIComponent(
-                    productTitle
-                  )}`}
-                  className="mt-auto flex items-center justify-center gap-2 w-full rounded-xl bg-[#241611] px-4 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:bg-[#c9a227] active:scale-[0.98]"
+                  }&product=${encodeURIComponent(productTitle)}`}
+                  className="mt-auto flex w-full items-center justify-center gap-2 rounded-xl bg-[#241611] px-4 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:bg-[#c9a227] active:scale-[0.98]"
                 >
                   <MessageSquareText size={16} />
                   Get Quote

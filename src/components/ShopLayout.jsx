@@ -44,11 +44,11 @@ const ShopLayout = ({
           image={heroImage}
         />
 
-        <section className="bg-white py-14">
+        <section className="bg-white py-18">
           <div className="max-w-[1200px] mx-auto px-6">
             {/* Mobile sidebar button */}
 
-            <div className="lg:hidden mb-6">
+            <div className="lg:hidden mb-10">
               <button
                 type="button"
                 onClick={() =>
