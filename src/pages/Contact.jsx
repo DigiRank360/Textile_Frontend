@@ -223,13 +223,8 @@ const Contact = () => {
   const infoItems = [
     {
       icon: MapPin,
-      title: "Visit Our Studio",
-      text: "123 Fragrance Lane, Varanasi",
-    },
-    {
-      icon: Clock,
-      title: "Studio Hours",
-      text: "Open daily • 10:00 AM – 8:00 PM",
+      title: "Visit",
+      text: "A-182 ENGLISH VILLAS KOLAR ROAD BHOPAL-462042",
     },
     {
       icon: Sparkles,
@@ -239,12 +234,12 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      text: "hello@yourbrand.com",
+      text: "info@eagleincensesticks.com",
     },
     {
       icon: Phone,
       title: "Call Us",
-      text: "+91 98765 43210",
+      text: "+91 9981997440",
     },
   ];
 

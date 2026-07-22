@@ -12,23 +12,17 @@ const Footer = () => {
 
   const shopLinks = [
     { label: "All Products", href: "/products" },
-    { label: "Categories", href: "/categories" },
     { label: "About Us", href: "/about" },
-    { label: "Contact", href: "/contact" },
   ];
 
   const careLinks = [
-    { label: "My Account", href: "/login" },
-    { label: "Track Order", href: "#" },
-    { label: "Shipping & Returns", href: "#" },
     { label: "FAQs", href: "#" },
-    { label: "Contact Us", href: "#" },
+    { label: "Contact Us", href: "/contact" },
   ];
 
   const legalLinks = [
     { label: "Privacy Policy", href: "#" },
     { label: "Terms & Conditions", href: "#" },
-    { label: "Shipping Policy", href: "#" },
   ];
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
