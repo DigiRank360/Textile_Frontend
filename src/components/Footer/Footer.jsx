@@ -137,7 +137,7 @@ const Footer = () => {
                 className="mb-4 h-9 w-auto object-contain sm:h-10"
               />
               <p className="mb-5 max-w-[360px] text-sm leading-7 text-[#b6a794]">
-                Crafting premium agarbatti and dhoop sticks since 1932.
+                Crafting premium agarbatti and dhoop sticks since 2023.
                 Experience the divine fragrance of nature with every ritual.
               </p>
 

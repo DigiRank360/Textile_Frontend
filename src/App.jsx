@@ -12,6 +12,7 @@ import About from './components/About/About';
 import MainLayout from './layouts/MainLayout';
 import PropertyDetails from "./pages/PropertyDetails";
 import ScrollToTop from "./components/ScrollToTop";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
         </Routes>
+
+        <WhatsAppButton />
       </MainLayout>
     </Router>
   );
