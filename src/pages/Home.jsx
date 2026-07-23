@@ -11,9 +11,9 @@ function Home() {
   return (
     <>
       <Hero />
-      <ShopByCategory />
       {/* <FeaturedProducts /> */}
       <BrandStory />
+      <ShopByCategory />
       {/* <MostLovedRituals /> */}
       <SacredProcess />
       {/* <Newsletter /> */}

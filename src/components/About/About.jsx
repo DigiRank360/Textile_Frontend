@@ -13,8 +13,8 @@ const FEATURES = [
 ];
 
 const STATS = [
-  { value: "15+", label: "Years Experience" },
-  { value: "5000+", label: "Happy Customers" },
+  { value: "5+", label: "Years Experience" },
+  { value: "500+", label: "Happy Customers" },
   { value: "100%", label: "Natural Products" }, 
 ];
 

@@ -82,7 +82,7 @@ const Footer = () => {
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
               <div className="w-full text-center sm:text-left lg:max-w-[460px]">
                 <h4 className="mb-2 font-serif text-2xl font-semibold leading-tight text-[#f2e9dc] sm:text-3xl">
-                  Join our circle
+                  Join Us
                 </h4>
                 <p className="mx-auto max-w-[420px] text-sm leading-6 text-[#b6a794] sm:mx-0 sm:text-[15px]">
                   Get early access to new fragrances, festival collections, and
@@ -134,10 +134,10 @@ const Footer = () => {
               <img
                 src={logo}
                 alt="Dhoop & Co."
-                className="mb-4 h-9 w-auto object-contain sm:h-10"
+                className=" h-22 w-auto object-contain sm:h-20"
               />
               <p className="mb-5 max-w-[360px] text-sm leading-7 text-[#b6a794]">
-                Crafting premium agarbatti and dhoop sticks since 2023.
+                Crafting premium agarbatti and dhoop sticks since 2021.
                 Experience the divine fragrance of nature with every ritual.
               </p>
 

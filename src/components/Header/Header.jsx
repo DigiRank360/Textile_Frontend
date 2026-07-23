@@ -22,8 +22,8 @@ const Header = ({ disableScrollColor = false }) => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Shop", path: "/products" },
     { name: "About", path: "/about" },
+    { name: "Shop", path: "/products" },
     { name: "Contact", path: "/contact" },
   ];
 
