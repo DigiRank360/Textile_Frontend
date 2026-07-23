@@ -66,7 +66,7 @@ const Contact = () => {
   const whatsappMessage = encodeURIComponent(
     productName
       ? `Hello, I would like to get a quote for ${productName}.`
-      : "Hello, I would like to know more about your incense products."
+      : "Hello, I would like to know more about your incense products.",
   );
 
   useEffect(() => {
@@ -97,9 +97,13 @@ const Contact = () => {
   const handlePhoneChange = (phone, country) => {
     const numericPhone = String(phone || "").replace(/\D/g, "");
 
+    const nationalNumber = country?.dialCode
+      ? numericPhone.slice(country.dialCode.length)
+      : numericPhone;
+
     setFormData((prev) => ({
       ...prev,
-      phone: numericPhone,
+      phone: nationalNumber,
     }));
 
     if (country?.dialCode) {
@@ -157,12 +161,11 @@ const Contact = () => {
     setIsSuccess(false);
 
     try {
-      const cleanPhone = formData.phone.replace(/\D/g, "");
 
       const payload = {
         name: formData.name.trim(),
         email: formData.email.trim(),
-        phone: `+${cleanPhone}`,
+        phone: formData.phone,
         countryCode: `+${selectedCountryCode}`,
         country: selectedCountryName,
         message: formData.message.trim(),
@@ -189,7 +192,7 @@ const Contact = () => {
       if (!response.ok) {
         throw new Error(
           data?.message ||
-            `Unable to submit enquiry. Server returned ${response.status}.`
+            `Unable to submit enquiry. Server returned ${response.status}.`,
         );
       }
 
@@ -218,8 +221,7 @@ const Contact = () => {
       console.error("Enquiry submission error:", error);
 
       alert(
-        error.message ||
-          "Unable to submit your enquiry. Please try again."
+        error.message || "Unable to submit your enquiry. Please try again.",
       );
     } finally {
       setIsSubmitting(false);
@@ -268,9 +270,7 @@ const Contact = () => {
       <PageHero
         label={productName ? "Get Quote" : "Contact Us"}
         title={
-          productName
-            ? "Request Your Product Quote"
-            : "We’re Here to Help"
+          productName ? "Request Your Product Quote" : "We’re Here to Help"
         }
         subtitle={
           productName
@@ -285,7 +285,6 @@ const Contact = () => {
         <section className="py-16 md:py-24">
           <div className="mx-auto max-w-[1200px] px-5 sm:px-6">
             <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
-
               {/* Left Side */}
               <div>
                 <span className="mb-3 block text-[12px] font-semibold uppercase tracking-[0.2em] text-[#c9a227]">
@@ -343,11 +342,7 @@ const Contact = () => {
                     );
 
                     return item.href ? (
-                      <a
-                        key={item.title}
-                        href={item.href}
-                        className="block"
-                      >
+                      <a key={item.title} href={item.href} className="block">
                         {content}
                       </a>
                     ) : (
@@ -383,14 +378,12 @@ const Contact = () => {
                 </span>
 
                 <h3 className="mb-2 font-serif text-2xl font-semibold text-[#241611] md:text-3xl">
-                  {productName
-                    ? "Get Product Pricing"
-                    : "How Can We Help?"}
+                  {productName ? "Get Product Pricing" : "How Can We Help?"}
                 </h3>
 
                 <p className="mb-7 text-sm leading-6 text-[#8a7c6a]">
-                  Fill in your details and our team will contact you within
-                  one business day.
+                  Fill in your details and our team will contact you within one
+                  business day.
                 </p>
 
                 <form onSubmit={handleSubmit} noValidate>
@@ -482,8 +475,7 @@ const Contact = () => {
                           width: "calc(100% - 20px)",
                           margin: "10px",
                           padding: "10px",
-                          border:
-                            "1px solid rgba(36,22,17,0.15)",
+                          border: "1px solid rgba(36,22,17,0.15)",
                           borderRadius: "8px",
                           outline: "none",
                         }}
@@ -554,9 +546,7 @@ const Contact = () => {
                     ) : (
                       <>
                         <Send size={17} />
-                        {productName
-                          ? "Request Product Quote"
-                          : "Send Enquiry"}
+                        {productName ? "Request Product Quote" : "Send Enquiry"}
                       </>
                     )}
                   </button>
