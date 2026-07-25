@@ -18,15 +18,6 @@ const BrandStory = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-
-            <div className="absolute -bottom-6 right-4 bg-white rounded-2xl shadow-xl shadow-[#241611]/10 p-5 max-w-[240px]">
-              <p className="text-[#241611] text-sm italic">
-                "Pure fragrance that fills every moment with peace."
-              </p>
-              <span className="text-[#8a7c6a] text-xs font-medium">
-                — Happy Customer
-              </span>
-            </div>
           </div>
 
           {/* Content */}

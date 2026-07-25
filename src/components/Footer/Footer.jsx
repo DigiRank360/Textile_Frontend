@@ -20,12 +20,12 @@ const Footer = () => {
   ];
 
   const careLinks = [
-    { label: "FAQs", href: "#" },
+    { label: "FAQs", href: "/faq" },
     { label: "Contact Us", href: "/contact" },
   ];
 
   const legalLinks = [
-    { label: "Privacy Policy", href: "#" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms & Conditions", href: "#" },
   ];
 

@@ -13,6 +13,8 @@ import MainLayout from './layouts/MainLayout';
 import PropertyDetails from "./pages/PropertyDetails";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/WhatsAppButton";
+import PrivacyAndPolicy from "./pages/PrivacyAndPlicy";
+import Faq from "./pages/Faq";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           {/* <Route path="/categories" element={<Categories />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/privacy-policy" element={<PrivacyAndPolicy />} />
         </Routes>
 
         <WhatsAppButton />
