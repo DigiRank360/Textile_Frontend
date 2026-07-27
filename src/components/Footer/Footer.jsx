@@ -26,7 +26,7 @@ const Footer = () => {
 
   const legalLinks = [
     { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Terms & Conditions", href: "#" },
+    { label: "Terms & Conditions", href: "/terms-and-conditions" },
   ];
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });

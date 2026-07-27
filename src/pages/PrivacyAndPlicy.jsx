@@ -754,7 +754,7 @@ const PrivacyAndPolicy = () => {
           image="/heroPage.png"
         />
 
-        <section className="overflow-hidden bg-[#fbf8f2] py-16 lg:py-24">
+        <section className="bg-[#fbf8f2] py-16 lg:py-24">
           <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
             {/* Policy Introduction */}
             <div className="relative overflow-hidden rounded-[32px] bg-[#241611] px-6 py-10 shadow-[0_25px_70px_rgba(36,22,17,0.18)] sm:px-10 lg:px-14 lg:py-14">
@@ -845,8 +845,8 @@ const PrivacyAndPolicy = () => {
             {/* Main Layout */}
             <div className="mt-10 grid gap-10 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-14">
               {/* Sidebar */}
-              <aside className="hidden lg:block">
-                <div className="sticky top-28">
+              <aside className="hidden h-fit self-start lg:sticky lg:top-[110px] lg:block">
+    <div className="sticky top-28 max-h-[calc(100vh-8rem)]">
                   <div className="rounded-[28px] border border-[#241611]/10 bg-white p-5 shadow-[0_20px_55px_rgba(36,22,17,0.08)]">
                     <div className="border-b border-[#241611]/10 pb-5">
                       <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#c9a227]">
@@ -869,28 +869,7 @@ const PrivacyAndPolicy = () => {
                     </nav>
                   </div>
 
-                  <div className="mt-5 rounded-[26px] bg-[#f1e8d9] p-6">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#c9a227]">
-                      <Mail size={20} className="text-[#241611]" />
-                    </div>
-
-                    <h3 className="mt-5 font-serif text-xl font-semibold text-[#241611]">
-                      Privacy Question?
-                    </h3>
-
-                    <p className="mt-3 text-sm leading-7 text-[#6b5f4f]">
-                      Contact our team regarding your personal information or
-                      privacy rights.
-                    </p>
-
-                    <a
-                      href={`mailto:${PRIVACY_EMAIL}`}
-                      className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#765a18] transition-colors hover:text-[#241611]"
-                    >
-                      Email Our Team
-                      <ArrowRight size={16} />
-                    </a>
-                  </div>
+                  
                 </div>
               </aside>
 

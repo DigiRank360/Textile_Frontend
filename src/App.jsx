@@ -15,7 +15,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/WhatsAppButton";
 import PrivacyAndPolicy from "./pages/PrivacyAndPlicy";
 import Faq from "./pages/Faq";
-
+import TermNcondition from "./pages/TermNcondition";
 function App() {
   return (
     <Router>
@@ -31,6 +31,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/privacy-policy" element={<PrivacyAndPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermNcondition />} />
         </Routes>
 
         <WhatsAppButton />
