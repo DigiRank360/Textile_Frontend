@@ -31,7 +31,7 @@ const BrandStory = () => {
             </h2>
 
             <p className="mt-5 text-[#6b5f4f] leading-8">
-              Since 2021, Eagle Agarbatti has been creating premium incense using
+              Since 2023, Eagle Agarbatti has been creating premium incense using
               carefully selected natural ingredients, delivering authentic aromas
               for prayer, meditation, and everyday peace.
             </p>

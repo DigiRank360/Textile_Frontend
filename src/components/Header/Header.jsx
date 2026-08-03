@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import { Search, Menu, X } from "lucide-react";
 
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/image.png";
 import "./Header.css";
 
 const Header = ({ disableScrollColor = false }) => {

@@ -7,6 +7,8 @@ import BrandStory from '../components/BrandStory/BrandStory';
 import SacredProcess from '../components/SacredProcess/SacredProcess';
 import Newsletter from '../components/Newsletter/Newsletter';
 // import Enquiries from '../components/EnquiryForm/EnquiryForm';
+import WhyChooseUs from '../components/WhyChooseUs/WCU';
+
 function Home() {
   return (
     <>
@@ -15,6 +17,7 @@ function Home() {
       <BrandStory />
       <ShopByCategory />
       {/* <MostLovedRituals /> */}
+      <WhyChooseUs />
       <SacredProcess />
       {/* <Newsletter /> */}
       {/* <Enquiries /> */}

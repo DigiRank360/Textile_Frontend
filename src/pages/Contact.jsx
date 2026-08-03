@@ -243,20 +243,7 @@ const Contact = () => {
       href: `mailto:${businessEmail}`,
       action: "Send email",
     },
-    {
-      icon: Clock,
-      title: "Business Hours",
-      text: "Monday–Saturday, 10:00 AM–7:00 PM",
-      href: null,
-      action: "Sunday closed",
-    },
-    {
-      icon: Sparkles,
-      title: "Product Assistance",
-      text: "Bulk orders, custom fragrances and product quotations",
-      href: null,
-      action: "Response within 24 hours",
-    },
+    
   ];
 
   const inputClass =
@@ -301,7 +288,7 @@ const Contact = () => {
                 </p>
 
                 {/* Contact Cards */}
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                   {contactItems.map((item) => {
                     const ItemIcon = item.icon;
 
@@ -309,7 +296,7 @@ const Contact = () => {
                       <div
                         className="
                           group h-full rounded-2xl border border-[#241611]/8
-                          bg-white p-5 transition-all duration-300
+                          bg-white p-3 transition-all duration-300
                           hover:-translate-y-1 hover:border-[#c9a227]/40
                           hover:shadow-[0_16px_45px_rgba(36,22,17,0.08)]
                         "
@@ -352,23 +339,7 @@ const Contact = () => {
                 </div>
 
                 {/* WhatsApp Button */}
-                <a
-                  href={`https://wa.me/${businessPhone}?text=${whatsappMessage}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-                    mt-6 inline-flex items-center gap-3 rounded-xl
-                    bg-[#25D366] px-5 py-3.5 text-sm font-semibold text-white
-                    shadow-[0_12px_30px_rgba(37,211,102,0.22)]
-                    transition-all duration-300
-                    hover:-translate-y-0.5 hover:bg-[#20bd5a]
-                    hover:shadow-[0_16px_38px_rgba(37,211,102,0.3)]
-                  "
-                >
-                  <MessageCircle size={19} />
-                  Chat with us on WhatsApp
-                  <ArrowUpRight size={16} />
-                </a>
+               
               </div>
 
               {/* Right Form */}

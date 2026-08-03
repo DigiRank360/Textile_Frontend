@@ -1,6 +1,5 @@
 // src/components/Footer/Footer.jsx
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   MapPin,
@@ -13,9 +12,14 @@ import {
   FaFacebookF,
   FaInstagram,
   FaYoutube,
+  FaLinkedin,
 } from "react-icons/fa";
 
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/image.png";
+import API_URL from "../config/config";
+
+
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -24,6 +28,7 @@ const Footer = () => {
   const [subscribed, setSubscribed] = useState(false);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [topProducts, setTopProducts] = useState([]);
 
   const quickLinks = [
     {
@@ -38,17 +43,21 @@ const Footer = () => {
       label: "About Us",
       path: "/about",
     },
-  ];
-
-  const customerCareLinks = [
     {
       label: "FAQs",
       path: "/faq",
     },
-    {
-      label: "Contact Us",
-      path: "/contact",
-    },
+  ];
+
+  const customerCareLinks = [
+    // {
+    //   label: "FAQs",
+    //   path: "/faq",
+    // },
+    // {
+    //   label: "Contact Us",
+    //   path: "/contact",
+    // },
   ];
 
   const legalLinks = [
@@ -75,9 +84,14 @@ const Footer = () => {
     },
     {
       label: "YouTube",
-      href: "https://www.youtube.com/",
+      href: "#",
       icon: <FaYoutube size={17} />,
     },
+    {
+      label: "LinkedIn",
+      href: "#",
+      icon: <FaLinkedin size={17} />,
+    }       
   ];
 
   const scrollToTop = () => {
@@ -93,6 +107,36 @@ const Footer = () => {
       behavior: "auto",
     });
   };
+
+
+
+useEffect(() => {
+  const fetchTopProducts = async () => {
+    try {
+      const response = await fetch(`${API_URL}/api/properties`);
+
+      if (!response.ok) return;
+
+      const data = await response.json();
+
+      const products =
+        data.properties ||
+        data.products ||
+        data.data ||
+        [];
+
+      setTopProducts(products.slice(0, 4));
+    } catch (error) {
+      console.error("Footer products error:", error);
+    }
+  };
+
+  fetchTopProducts();
+}, []);
+
+
+
+
 
   const handleSubscribe = async (event) => {
     event.preventDefault();
@@ -322,22 +366,22 @@ const Footer = () => {
             {/* Customer Care */}
             <div className="min-w-0">
               <h3 className="mb-5 text-[13px] font-semibold uppercase tracking-[0.14em] text-[#c9a227]">
-                Customer Care
+                Featured Products
               </h3>
 
-              <ul className="flex flex-col gap-3.5">
-                {customerCareLinks.map((link) => (
-                  <li key={link.path}>
-                    <Link
-                      to={link.path}
-                      onClick={handleInternalLinkClick}
-                      className="inline-flex min-h-[28px] items-center text-sm text-[#b6a794] transition-all duration-300 hover:translate-x-1 hover:text-[#f2e9dc]"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+                           <ul className="flex flex-col gap-3.5">
+                            {topProducts.map((product) => (
+                              <li key={product._id}>
+                                <Link
+                                  to={`/properties/${product._id}`}
+                                  onClick={handleInternalLinkClick}
+                                  className="inline-flex min-h-[28px] items-center text-sm text-[#b6a794] transition-all duration-300 hover:translate-x-1 hover:text-[#f2e9dc] line-clamp-1"
+                                >
+                                  {product.title || product.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
             </div>
 
             {/* Contact Details */}
