@@ -15,7 +15,7 @@ const Hero = () => {
 
       <div className="hero-container">
         <div className="hero-content">
-          <p className="hero-badge">Established in 1932</p>
+          <p className="hero-badge">Established in 2023</p>
 
           <h1 className="hero-title">
             Experience the Divine<br />

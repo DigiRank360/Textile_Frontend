@@ -65,12 +65,12 @@ const Footer = () => {
   const socialLinks = [
     {
       label: "Facebook",
-      href: "https://www.facebook.com/",
+      href: "https://www.facebook.com/profile.php?id=61592470656285",
       icon: <FaFacebookF size={15} />,
     },
     {
       label: "Instagram",
-      href: "https://www.instagram.com/",
+      href: "https://www.instagram.com/eagleshipkart/",
       icon: <FaInstagram size={16} />,
     },
     {
@@ -354,7 +354,7 @@ const Footer = () => {
 
                   <p className="min-w-0 break-words text-sm leading-6 text-[#b6a794]">
                     A-182 English Villas, Kolar Road,
-                    Bhopal, Madhya Pradesh - 462042
+                    Bhopal, Madhya Pradesh - 462042  (India)
                   </p>
                 </div>
 

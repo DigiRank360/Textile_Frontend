@@ -91,7 +91,7 @@ function App() {
           />
         </Routes>
 
-        <WhatsAppButton />
+        {/* <WhatsAppButton /> */}
       </MainLayout>
     </Router>
   );
