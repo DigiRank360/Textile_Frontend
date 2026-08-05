@@ -59,7 +59,7 @@ const Contact = () => {
   const businessEmail = "info@eagleincensesticks.com";
 
   const businessAddress =
-    "A-182 English Villas, Kolar Road, Bhopal, Madhya Pradesh 462042";
+    "A-182 English Villas, Kolar Road, Bhopal, Madhya Pradesh 462042 (India)";
 
   const mapAddress = encodeURIComponent(businessAddress);
 
@@ -566,7 +566,7 @@ const Contact = () => {
                   </span>
 
                   <h2 className="mb-4 font-serif text-2xl font-semibold md:text-3xl">
-                    Visit Our Office
+                    Visit Our Office 
                   </h2>
 
                   <p className="mb-6 text-sm leading-7 text-white/70">
