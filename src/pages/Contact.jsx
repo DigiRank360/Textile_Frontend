@@ -51,6 +51,8 @@ const Contact = () => {
 
   const [selectedCountryCode, setSelectedCountryCode] = useState("91");
   const [selectedCountryName, setSelectedCountryName] = useState("India");
+  const [phoneValue, setPhoneValue] = useState("91");
+  const [phoneError, setPhoneError] = useState("");
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -94,24 +96,38 @@ const Contact = () => {
     }
   };
 
-  const handlePhoneChange = (phone, country) => {
-    const numericPhone = String(phone || "").replace(/\D/g, "");
+  const handlePhoneChange = (value, country) => {
+    const numericValue = String(value || "").replace(/\D/g, "");
+    const dialCode = String(country?.dialCode || selectedCountryCode || "").replace(/\D/g, "");
 
-    const nationalNumber = country?.dialCode
-      ? numericPhone.slice(country.dialCode.length)
-      : numericPhone;
+    // react-phone-input-2 expects the complete value: dial code + national number.
+    // Keep that full value in phoneValue, but save only the national number in formData.
+    setPhoneValue(numericValue);
+
+    const nationalNumber =
+      dialCode && numericValue.startsWith(dialCode)
+        ? numericValue.slice(dialCode.length)
+        : numericValue;
 
     setFormData((prev) => ({
       ...prev,
       phone: nationalNumber,
     }));
 
-    if (country?.dialCode) {
-      setSelectedCountryCode(country.dialCode);
+    if (dialCode) {
+      setSelectedCountryCode(dialCode);
     }
 
     if (country?.name) {
       setSelectedCountryName(country.name);
+    }
+
+    if (!nationalNumber) {
+      setPhoneError("Phone number is required.");
+    } else if (nationalNumber.length < 6 || nationalNumber.length > 15) {
+      setPhoneError("Please enter a valid phone number.");
+    } else {
+      setPhoneError("");
     }
 
     if (isSuccess) {
@@ -135,14 +151,13 @@ const Contact = () => {
       return false;
     }
 
-    const nationalNumber = cleanPhone.startsWith(selectedCountryCode)
-      ? cleanPhone.slice(selectedCountryCode.length)
-      : cleanPhone;
-
-    if (nationalNumber.length < 6) {
+    if (cleanPhone.length < 6 || cleanPhone.length > 15) {
+      setPhoneError("Please enter a valid phone number.");
       alert("Please enter a valid phone number.");
       return false;
     }
+
+    setPhoneError("");
 
     if (!cleanMessage) {
       alert("Please enter your message.");
@@ -165,7 +180,8 @@ const Contact = () => {
       const payload = {
         name: formData.name.trim(),
         email: formData.email.trim(),
-        phone: formData.phone,
+        // Keep phone and countryCode separate to avoid submitting the dial code twice.
+        phone: formData.phone.replace(/\D/g, ""),
         countryCode: `+${selectedCountryCode}`,
         country: selectedCountryName,
         message: formData.message.trim(),
@@ -213,6 +229,8 @@ const Contact = () => {
 
       setSelectedCountryCode("91");
       setSelectedCountryName("India");
+      setPhoneValue("91");
+      setPhoneError("");
 
       window.setTimeout(() => {
         setIsSuccess(false);
@@ -397,8 +415,10 @@ const Contact = () => {
                     <div className="relative z-20">
                       <PhoneInput
                         country="in"
-                        value={formData.phone}
+                        value={phoneValue}
                         onChange={handlePhoneChange}
+                        countryCodeEditable={false}
+                        enableLongNumbers={15}
                         enableSearch
                         disableSearchIcon={false}
                         searchPlaceholder="Search country..."
@@ -415,6 +435,7 @@ const Contact = () => {
                           name: "phone",
                           required: true,
                           autoComplete: "tel",
+                          inputMode: "tel",
                           "aria-label": "Phone number",
                         }}
                         containerStyle={{
@@ -451,6 +472,12 @@ const Contact = () => {
                           outline: "none",
                         }}
                       />
+
+                      {phoneError && (
+                        <p className="mt-1.5 text-xs text-red-600">
+                          {phoneError}
+                        </p>
+                      )}
                     </div>
                   </div>
 
