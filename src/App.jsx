@@ -21,11 +21,14 @@ import TermNcondition from "./pages/TermNcondition";
 import MainLayout from "./layouts/MainLayout";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/WhatsAppButton";
+import MetaPixel from './components/MetaPixel'
+
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <MetaPixel />
 
       <MainLayout>
         <Routes>
