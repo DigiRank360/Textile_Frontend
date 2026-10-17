@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Leaf, Clock, ArrowRight } from "lucide-react";
-import agerbatti from "../../assets/images/agarbatti.png";
+import agerbatti from "../../assets/images/brandstory.jpg";
 
 const BrandStory = () => {
   return (
@@ -14,8 +14,8 @@ const BrandStory = () => {
             <div className="rounded-2xl overflow-hidden bg-[#e9dfd2]">
               <img
                 src={agerbatti}
-                alt="Eagle Premium Agarbatti"
-                className="w-full h-full object-cover"
+                alt="Eagle Textile Fabrics"
+                className="w-full h-[420px] lg:h-[520px] object-cover"
               />
             </div>
           </div>
@@ -27,13 +27,13 @@ const BrandStory = () => {
             </span>
 
             <h2 className="mt-3 font-serif text-3xl md:text-4xl font-semibold text-[#241611]">
-              Crafted with Tradition & Purity
+              Woven with Quality & Craftsmanship
             </h2>
 
             <p className="mt-5 text-[#6b5f4f] leading-8">
-              Since 2023, Eagle Agarbatti has been creating premium incense using
-              carefully selected natural ingredients, delivering authentic aromas
-              for prayer, meditation, and everyday peace.
+              Eagle Textile supplies premium fabrics made with carefully selected
+              yarns and finishing processes, delivering consistent quality,
+              rich colours and a soft feel for fashion, home and bulk business needs.
             </p>
 
             <div className="flex flex-wrap gap-8 mt-8">
@@ -42,7 +42,7 @@ const BrandStory = () => {
                   <Leaf size={18} />
                 </div>
                 <span className="text-sm font-medium text-[#241611]">
-                  100% Natural
+                  Premium Fabrics
                 </span>
               </div>
 
@@ -51,7 +51,7 @@ const BrandStory = () => {
                   <Clock size={18} />
                 </div>
                 <span className="text-sm font-medium text-[#241611]">
-                  Premium Quality
+                  Consistent Quality
                 </span>
               </div>
             </div>

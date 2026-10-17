@@ -22,13 +22,12 @@ import {
   AlertCircle,
 } from "lucide-react";
 
-import Header from "../components/Header/Header";
 import PageHero from "../components/PageHero/PageHero";
 import "../components/PageHero/PageSections.css";
 
-const COMPANY_NAME = "Eagle Incense Sticks";
-const WEBSITE = "https://eagleincensesticks.com";
-const PRIVACY_EMAIL = "privacy@eagleincensesticks.com";
+const COMPANY_NAME = "Eagle Textile";
+const WEBSITE = "https://hummotextile.com";
+const PRIVACY_EMAIL = "eaglefabrichub@gmail.com";
 
 const BUSINESS_ADDRESS =
   "Add your registered business address, city, state, postal code, India";
@@ -599,7 +598,7 @@ const POLICY_SECTIONS = [
 
         <a
           href={`mailto:${PRIVACY_EMAIL}`}
-          className="inline-flex items-center gap-2 rounded-full bg-[#241611] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#c9a227] hover:text-[#241611]"
+          className="inline-flex items-center gap-2 rounded-md bg-[#111111] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-[#c9a227] hover:text-[#111111] hover:text-white"
         >
           Submit a Privacy Request
           <ArrowRight size={17} />
@@ -700,7 +699,7 @@ const POLICY_SECTIONS = [
           <ContactDetail
             icon={Globe2}
             label="Website"
-            value="eagleincensesticks.com"
+            value="hummotextile.com"
             href={WEBSITE}
           />
 
@@ -744,14 +743,13 @@ const PrivacyAndPolicy = () => {
 
   return (
     <>
-      <Header disableScrollColor />
 
       <main>
         <PageHero
           label="Legal & Privacy"
           title="Privacy Policy"
-          subtitle="Learn how Eagle Incense Sticks collects, uses and protects personal information across domestic and international business interactions."
-          image="/heroPage.png"
+          subtitle="Learn how Eagle Textile collects, uses and protects personal information across domestic and international business interactions."
+          image="/heroPage.jpg"
         />
 
         <section className="bg-[#fbf8f2] py-16 lg:py-24">
@@ -954,7 +952,7 @@ const PrivacyAndPolicy = () => {
                 <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#c9a227] px-7 py-4 text-sm font-semibold text-[#241611] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl"
+                    className="inline-flex items-center gap-2 rounded-md bg-white px-7 py-4 text-sm font-semibold text-[#111111] transition-all duration-200 hover:bg-[#c9a227]"
                   >
                     Contact Our Team
                     <ArrowRight size={18} />
@@ -962,7 +960,7 @@ const PrivacyAndPolicy = () => {
 
                   <a
                     href={`mailto:${PRIVACY_EMAIL}`}
-                    className="inline-flex items-center gap-2 rounded-full border border-white/20 px-7 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-[#241611]"
+                    className="inline-flex items-center gap-2 rounded-md border border-white/20 px-7 py-4 text-sm font-semibold text-white transition-all duration-200 hover:border-white hover:bg-[#c9a227] hover:text-[#111111] hover:text-[#241611]"
                   >
                     <Mail size={18} />
                     Privacy Enquiry

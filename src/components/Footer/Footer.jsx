@@ -244,8 +244,8 @@ useEffect(() => {
                 </h2>
 
                 <p className="mx-auto max-w-[470px] text-sm leading-6 text-[#b6a794] lg:mx-0 sm:text-[15px]">
-                  Get early access to new fragrances,
-                  festival collections and exclusive
+                  Get early access to new fabrics,
+                  seasonal collections and exclusive
                   updates directly in your inbox.
                 </p>
               </div>
@@ -271,7 +271,7 @@ useEffect(() => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="flex min-h-[50px] w-full items-center justify-center gap-2 rounded-lg bg-[#c9a227] px-6 py-3 text-sm font-semibold text-[#241611] transition-all duration-300 hover:bg-[#dbb43a] focus:outline-none focus:ring-2 focus:ring-[#c9a227]/40 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:min-w-[150px] sm:rounded-l-none"
+                    className="flex min-h-[50px] w-full items-center justify-center gap-2 rounded-md bg-white px-6 py-3 text-sm font-semibold text-[#111111] transition-all duration-200 hover:bg-[#c9a227] focus:outline-none focus:ring-2 focus:ring-white/40 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:min-w-[150px] sm:rounded-l-none"
                   >
                     <span>
                       {loading
@@ -312,17 +312,17 @@ useEffect(() => {
               >
                 <img
                   src={logo}
-                  alt="Eagle Incense Sticks"
+                  alt="Eagle Textile"
                   className="h-20 w-auto max-w-full object-contain sm:h-24"
                 />
               </Link>
 
               <p className="mb-5 max-w-[390px] text-sm leading-7 text-[#b6a794]">
-                Crafting premium agarbatti and dhoop
-                sticks with carefully selected
-                fragrances for peaceful rituals,
-                spiritual moments and everyday
-                freshness.
+                Supplying premium fabrics with
+                carefully selected yarns, rich
+                colours and a refined finish for
+                fashion, home and bulk
+                business needs.
               </p>
 
               <div className="flex flex-wrap items-center gap-3">
@@ -334,7 +334,7 @@ useEffect(() => {
                     rel="noopener noreferrer"
                     aria-label={social.label}
                     title={social.label}
-                    className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.07] text-[#e9dfd2] transition-all duration-300 hover:-translate-y-1 hover:border-[#c9a227] hover:bg-[#c9a227] hover:text-[#241611]"
+                    className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.07] text-[#e9dfd2] transition-all duration-200 hover:border-[#c9a227] hover:bg-[#c9a227] hover:text-[#241611]"
                   >
                     {social.icon}
                   </a>
@@ -432,10 +432,10 @@ useEffect(() => {
                     </p>
 
                     <a
-                      href="mailto:info@eagleincensesticks.com"
+                      href="mailto:eaglefabrichub@gmail.com"
                       className="block min-w-0 break-all text-sm leading-6 text-[#b6a794] transition-colors hover:text-[#f2e9dc]"
                     >
-                      info@eagleincensesticks.com
+                      eaglefabrichub@gmail.com
                     </a>
                   </div>
                 </div>
@@ -449,7 +449,7 @@ useEffect(() => {
           {/* Bottom Footer */}
           <div className="flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
             <p className="m-0 text-[12px] leading-5 text-[#8a7c6a] sm:text-[13px]">
-              © {currentYear} Eagle Incense Sticks.
+              © {currentYear} Eagle Textile.
               All rights reserved.
             </p>
 
@@ -475,7 +475,7 @@ useEffect(() => {
         onClick={scrollToTop}
         aria-label="Scroll to top"
         title="Scroll to top"
-        className="fixed bottom-4 right-4 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-[#c9a227] text-[#241611] shadow-[0_6px_20px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#dbb43a] focus:outline-none focus:ring-2 focus:ring-[#c9a227]/40 sm:bottom-6 sm:right-6 sm:h-12 sm:w-12"
+        className="fixed bottom-4 right-4 z-40 flex h-11 w-11 items-center justify-center rounded-md border border-white/30 bg-[#111111] text-white shadow-[0_6px_20px_rgba(0,0,0,0.35)] transition-all duration-200 hover:bg-[#c9a227] hover:text-[#111111] focus:outline-none focus:ring-2 focus:ring-white/40 sm:bottom-6 sm:right-6 sm:h-12 sm:w-12"
       >
         <ArrowUp size={19} />
       </button>

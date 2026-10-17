@@ -11,18 +11,17 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-import Header from "../Header/Header";
 import PageHero from "../PageHero/PageHero";
 import "../PageHero/PageSections.css";
 
-import about from "../../assets/images/about.png";
+import about from "../../assets/images/about.jpg";
 import founder from "../../assets/images/founder.jpeg";
 
 const FEATURES = [
-  "100% Natural Ingredients",
-  "Traditional Handcrafted Process",
-  "Long-Lasting Premium Fragrance",
-  "Trusted Quality Since 2023",
+  "Premium Quality Yarns & Fibres",
+  "Skilled Weaving & Finishing",
+  "Colour-Fast, Durable Fabrics",
+  "Trusted Quality You Can Rely On",
 ];
 
 const STATS = [
@@ -36,35 +35,35 @@ const STATS = [
   },
   {
     value: "100%",
-    label: "Natural Products",
+    label: "Quality Assured",
   },
 ];
 
 const PROCESS = [
   {
     icon: Leaf,
-    title: "Sourcing",
-    copy: "Natural botanicals, aromatic resins and essential oils are carefully selected from trusted suppliers for purity and quality.",
+    title: "Yarn Sourcing",
+    copy: "Cotton, silk and blended yarns are carefully selected from trusted suppliers for strength and quality.",
   },
   {
     icon: Hand,
-    title: "Blending",
-    copy: "Every ingredient is measured and blended with care using traditional formulations refined over the years.",
+    title: "Weaving",
+    copy: "Skilled weavers and modern looms create fabrics with precise texture, weight and drape.",
   },
   {
     icon: Flame,
-    title: "Rolling",
-    copy: "Each incense stick is carefully shaped and rolled to achieve a consistent burn and balanced fragrance.",
+    title: "Dyeing & Printing",
+    copy: "Colour-fast dyes and detailed prints deliver vibrant, long-lasting shades in every batch.",
   },
   {
     icon: Clock3,
-    title: "Curing",
-    copy: "The incense sticks are naturally rested and dried, allowing the fragrance to settle deeply into the base.",
+    title: "Finishing",
+    copy: "Fabrics are softened, treated and inspected to achieve a smooth, consistent finish.",
   },
   {
     icon: PackageCheck,
     title: "Packaging",
-    copy: "Every finished product is inspected and securely packed before leaving our workshop for customers.",
+    copy: "Every finished product is inspected and securely packed before leaving our facility for customers.",
   },
 ];
 
@@ -88,14 +87,13 @@ const About = () => {
 
   return (
     <>
-      <Header disableScrollColor />
 
       <main>
         <PageHero
           label="About Us"
-          title="Where Tradition Meets Lasting Fragrance"
-          subtitle="Crafted with care since 2023 — a story of natural ingredients, patience and timeless techniques."
-          image="/heroPage.png"
+          title="Where Tradition Meets Lasting Quality"
+          subtitle="Crafted with care — a story of quality fabrics, patience and timeless techniques."
+          image="/heroPage.jpg"
         />
 
         <section
@@ -112,7 +110,7 @@ const About = () => {
             >
               <div className="mb-14 text-center lg:mb-20">
                 <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.25em] text-[#c9a227]">
-                  The Vision Behind Eagle
+                  The Vision Behind Eagle Textile
                 </span>
 
                 <h2 className="mt-4 font-serif text-4xl font-semibold leading-tight text-[#241611] md:text-5xl">
@@ -126,9 +124,9 @@ const About = () => {
                 </div>
 
                 <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-[#6b5f4f]">
-                  A journey inspired by traditional craftsmanship, authentic
-                  ingredients and the belief that fragrance can bring peace and
-                  positivity into everyday life.
+                  A journey inspired by traditional craftsmanship, quality
+                  materials and the belief that great fabric inspires great
+                  design and everyday comfort.
                 </p>
               </div>
 
@@ -142,7 +140,7 @@ const About = () => {
                   <div className="relative overflow-hidden rounded-[30px] bg-[#f5efe3] shadow-[0_25px_70px_rgba(36,22,17,0.18)]">
                     <img
                       src={founder}
-                      alt="Kodanda Pani, Founder of Eagle Incense Sticks"
+                      alt="Kodanda Pani, Founder of Eagle Textile"
                       className="h-[500px] w-full object-cover object-top transition-transform duration-700 hover:scale-105 sm:h-[600px]"
                     />
 
@@ -158,7 +156,7 @@ const About = () => {
                       </h3>
 
                       <p className="mt-2 text-sm text-white/75">
-                        Founder, Eagle Incense Sticks
+                        Founder, Eagle Textile
                       </p>
                     </div>
                   </div>
@@ -183,7 +181,7 @@ const About = () => {
                   <h2 className="mt-5 font-serif text-4xl font-light leading-tight text-[#241611] md:text-5xl lg:text-[54px]">
                     A Legacy Built on
                     <span className="block font-semibold text-[#c9a227]">
-                      Trust and Fragrance
+                      Trust and Quality
                     </span>
                   </h2>
 
@@ -198,24 +196,24 @@ const About = () => {
                       <strong className="font-semibold text-[#241611]">
                         Kodanda Pani
                       </strong>
-                      , Eagle Incense Sticks was founded with a meaningful
-                      vision to preserve the traditional art of incense making
-                      while creating fragrances that enrich everyday life.
+                      , Eagle Textile was founded with a meaningful
+                      vision to preserve the traditional art of textile making
+                      while creating fabrics that enrich everyday life.
                     </p>
 
                     <p>
                       His dedication to purity, craftsmanship and customer
                       trust continues to guide every product we create. He
-                      believes incense is more than a fragrance; it is an
-                      experience that can bring calmness, positivity and
-                      spiritual harmony into every home.
+                      believes fabric is more than a material; it is an
+                      experience of comfort, colour and confidence that
+                      reaches every home and wardrobe.
                     </p>
 
                     <p>
-                      What began as a passion for authentic fragrance has grown
-                      into a trusted incense brand known for consistent
-                      quality, carefully selected ingredients and long-lasting
-                      aromas.
+                      What began as a passion for authentic textiles has grown
+                      into a trusted brand known for consistent
+                      quality, carefully selected yarns and long-lasting
+                      fabrics.
                     </p>
                   </div>
 
@@ -229,9 +227,9 @@ const About = () => {
                       </div>
 
                       <p className="mt-5 font-serif text-xl italic leading-9 text-[#38251d] sm:text-2xl">
-                        “True fragrance is more than an aroma. It is an
-                        experience that brings peace, positivity and lasting
-                        memories into every home.”
+                        “True quality is more than a fabric. It is an
+                        experience of comfort, trust and lasting
+                        value in everything we deliver.”
                       </p>
 
                       <div className="mt-6 border-t border-[#241611]/10 pt-5">
@@ -240,7 +238,7 @@ const About = () => {
                         </h4>
 
                         <p className="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#8a7c6a]">
-                          Founder, Eagle Incense Sticks
+                          Founder, Eagle Textile
                         </p>
                       </div>
                     </div>
@@ -258,7 +256,7 @@ const About = () => {
             >
               <div className="mb-14 text-center lg:mb-20">
                 <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.25em] text-[#c9a227]">
-                  About Eagle Incense Sticks
+                  About Eagle Textile
                 </span>
 
                 <h2 className="mt-4 font-serif text-4xl font-semibold leading-tight text-[#241611] md:text-5xl">
@@ -267,8 +265,8 @@ const About = () => {
 
                 <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[#6b5f4f]">
                   Rooted in tradition and guided by quality, we create
-                  fragrances designed to make everyday spaces peaceful,
-                  positive and memorable.
+                  fabrics designed to make everyday wear and spaces
+                  comfortable, stylish and memorable.
                 </p>
               </div>
 
@@ -282,7 +280,7 @@ const About = () => {
                   <div className="relative overflow-hidden rounded-[30px] shadow-[0_25px_70px_rgba(36,22,17,0.18)]">
                     <img
                       src={about}
-                      alt="Premium handcrafted Eagle incense sticks"
+                      alt="Premium Eagle Textile fabrics"
                       className="h-[480px] w-full object-cover transition-transform duration-700 hover:scale-105 sm:h-[580px] lg:h-[650px]"
                     />
 
@@ -295,7 +293,7 @@ const About = () => {
                     </p>
 
                     <p className="mt-2 font-serif text-xl font-semibold leading-snug text-[#241611]">
-                      Authentic fragrance created with patience and care.
+                      Authentic fabrics created with patience and care.
                     </p>
                   </div>
                 </div>
@@ -309,7 +307,7 @@ const About = () => {
                   <h2 className="mt-5 font-serif text-4xl font-light leading-tight text-[#241611] md:text-5xl lg:text-[56px]">
                     Where Tradition Meets
                     <span className="block font-semibold text-[#c9a227]">
-                      Lasting Fragrance
+                      Lasting Quality
                     </span>
                   </h2>
 
@@ -320,16 +318,16 @@ const About = () => {
 
                   <div className="mt-7 space-y-5 text-base leading-8 text-[#6b5f4f] sm:text-lg">
                     <p>
-                      At Eagle Incense Sticks, every fragrance is created with
-                      deep respect for tradition. Our incense sticks are
-                      carefully crafted using selected natural ingredients,
-                      aromatic oils and time-honoured techniques.
+                      At Eagle Textile, every fabric is created with
+                      deep respect for tradition. Our textiles are
+                      carefully crafted using selected yarns,
+                      quality dyes and time-honoured techniques.
                     </p>
 
                     <p>
-                      Our purpose is to create fragrances that bring peace,
-                      positivity and elegance into everyday spaces. From
-                      sourcing ingredients to final packaging, every stage
+                      Our purpose is to create fabrics that bring comfort,
+                      colour and elegance into everyday life. From
+                      sourcing yarn to final packaging, every stage
                       reflects our dedication to quality and authenticity.
                     </p>
                   </div>
@@ -341,7 +339,7 @@ const About = () => {
                         key={item}
                         className="group flex items-center gap-3 rounded-2xl border border-[#241611]/10 bg-[#f8f4ec] p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#c9a227]/50 hover:bg-white hover:shadow-lg"
                       >
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#c9a227]/15 transition-colors duration-300 group-hover:bg-[#c9a227]">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[#111111]/15 transition-colors duration-200 group-hover:bg-[#c9a227] hover:text-[#111111]">
                           <Check className="h-5 w-5 text-[#8a6d2f] transition-colors duration-300 group-hover:text-white" />
                         </div>
 
@@ -383,12 +381,12 @@ const About = () => {
                 </span>
 
                 <h2 className="font-serif text-4xl font-semibold text-[#241611] md:text-5xl">
-                  The Art Behind Every Stick
+                  The Craft Behind Every Fabric
                 </h2>
 
                 <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-[#6b5f4f]">
-                  Every incense stick passes through a careful process designed
-                  to preserve its natural fragrance, consistent burn and
+                  Every fabric passes through a careful process designed
+                  to preserve its softness, colour consistency and
                   premium quality.
                 </p>
               </div>
@@ -404,7 +402,7 @@ const About = () => {
                         {String(index + 1).padStart(2, "0")}
                       </span>
 
-                      <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#f5efe3] transition-all duration-300 group-hover:bg-[#c9a227]">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-md bg-[#f5efe3] transition-all duration-200 group-hover:bg-[#c9a227]">
                         <Icon
                           size={19}
                           className="text-[#8a6d2f] transition-colors duration-300 group-hover:text-[#241611]"
@@ -441,22 +439,22 @@ const About = () => {
 
               <div className="relative mx-auto max-w-3xl">
                 <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#c9a227]">
-                  Experience Eagle Fragrances
+                  Experience Eagle Textile
                 </span>
 
                 <h2 className="mt-5 font-serif text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-                  Bring Peace, Positivity and Timeless Fragrance Into Your Home
+                  Bring Quality, Colour and Timeless Style to Your Collection
                 </h2>
 
                 <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/65">
-                  Discover our handcrafted incense collection, created with
-                  carefully selected ingredients and a commitment to purity,
-                  tradition and lasting quality.
+                  Discover our premium fabric collection, created with
+                  carefully selected yarns and a commitment to quality,
+                  tradition and lasting value.
                 </p>
 
                 <Link
                   to="/products"
-                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#c9a227] px-8 py-4 text-sm font-semibold text-[#241611] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl"
+                  className="mt-8 inline-flex items-center gap-2 rounded-md bg-[#111111] px-8 py-4 text-sm font-semibold text-white transition-all duration-200 hover:bg-[#c9a227] hover:text-[#111111]"
                 >
                   Discover Our Collection
                   <ArrowRight size={18} />

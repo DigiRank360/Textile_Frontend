@@ -10,25 +10,24 @@ import {
   Leaf,
 } from "lucide-react";
 import API_URL, { getImageUrl } from "../components/config/config";
-import Header from "../components/Header/Header";
 import PageHero from "../components/PageHero/PageHero";
 import "../components/PageHero/PageSections.css";
 
 const RITUAL_STEPS = [
   {
     icon: Flame,
-    title: "Warm",
-    copy: "Let the piece settle for a few minutes before use, allowing it to reach its natural temperature.",
+    title: "Inspect",
+    copy: "Check the fabric for shade, width and finish before cutting or stitching.",
   },
   {
     icon: Wind,
-    title: "Diffuse",
-    copy: "Release slowly into the room — the fragrance unfolds in layers over the first half hour.",
+    title: "Prepare",
+    copy: "Pre-wash or steam as recommended so the fabric settles and shrinkage is accounted for.",
   },
   {
     icon: Sparkles,
-    title: "Savor",
-    copy: "Return to it through the day. Notes shift as they open, so the last hour rarely smells like the first.",
+    title: "Create",
+    copy: "Cut, stitch and style with confidence — quality fabric drapes and wears beautifully.",
   },
 ];
 
@@ -76,14 +75,13 @@ const PropertyDetails = () => {
   if (loading) {
     return (
       <>
-        <Header disableScrollColor />
 
         <main>
           <PageHero
             label="Shop Details"
             title="Product Details"
             subtitle="Fetching everything you need to know about this product."
-            image="/heroPage.png"
+            image="/heroPage.jpg"
           />
 
           <div className="max-w-[1100px] mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -117,7 +115,6 @@ const PropertyDetails = () => {
   if (!property) {
     return (
       <>
-        <Header disableScrollColor />
 
         <main>
           <PageHero
@@ -141,7 +138,7 @@ const PropertyDetails = () => {
 
             <Link
               to="/products"
-              className="inline-flex items-center gap-2 border border-[#241611]/25 text-[#241611] px-6 py-2.5 rounded-full text-sm font-medium hover:bg-[#241611] hover:text-[#f2e9dc] transition-colors"
+              className="inline-flex items-center gap-2 border border-[#111111]/25 text-[#111111] px-6 py-2.5 rounded-md text-sm font-medium hover:bg-[#111111] hover:text-white transition-colors"
             >
               Back to Products
             </Link>
@@ -159,7 +156,10 @@ const PropertyDetails = () => {
     property._id
   }&product=${encodeURIComponent(property.title || "")}`;
 
-  const eyebrow = property.category || "Signature Piece";
+  const eyebrow =
+    (typeof property.category === "object"
+      ? property.category?.name
+      : property.category) || "Signature Piece";
 
   const fadeCls = (delayMs = 0) =>
     `transition-all duration-700 ease-out ${
@@ -168,13 +168,12 @@ const PropertyDetails = () => {
 
   return (
     <>
-      <Header disableScrollColor />
 
       <main>
         <PageHero
           label="Shop"
           title={property.title}
-          subtitle="Explore the details, fragrance notes and ritual behind this piece."
+          subtitle="Explore the details, fabric details and care behind this piece."
         />
 
         <section className="bg-white py-14">
@@ -295,7 +294,7 @@ const PropertyDetails = () => {
                 {/* Get Quote */}
                 <Link
                   to={quoteUrl}
-                  className="w-full flex items-center justify-center gap-2 bg-[#241611] hover:bg-[#c9a227] text-[#f2e9dc] font-medium text-sm py-3.5 rounded-full transition-colors duration-300"
+                  className="w-full flex items-center justify-center gap-2 bg-[#111111] hover:bg-[#c9a227] hover:text-[#111111] text-white font-medium text-sm py-3.5 rounded-md transition-colors duration-200"
                 >
                   <MessageSquareText size={17} />
                   Get Quote
@@ -308,7 +307,7 @@ const PropertyDetails = () => {
               </div>
             </div>
 
-            {/* The Ritual — signature section */}
+            {/* Using the Fabric — signature section */}
             <div
               className={`mt-20 pt-14 border-t border-[#241611]/10 ${fadeCls()}`}
               style={{ transitionDelay: mounted ? "260ms" : "0ms" }}
@@ -318,7 +317,7 @@ const PropertyDetails = () => {
                   How to use
                 </span>
                 <h2 className="font-serif text-2xl md:text-3xl font-semibold text-[#241611]">
-                  The Ritual
+                  Using the Fabric
                 </h2>
               </div>
 

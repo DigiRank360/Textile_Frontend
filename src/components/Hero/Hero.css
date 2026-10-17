@@ -11,9 +11,26 @@
   justify-content: center;
 }
 
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+}
+
+.hero-slide.is-active .hero-bg {
+  transform: scale(1.08);
+}
+
 .hero-bg {
   position: absolute;
   inset: 0;
+  transform: scale(1);
+  transition: transform 7s ease-out;
   background-size: cover;
   background-position: center 30%;
   background-repeat: no-repeat;
@@ -34,7 +51,7 @@
 .hero-overlay-multiply {
   position: absolute;
   inset: 0;
-  background: rgba(80, 40, 10, 0.25);
+  background: rgba(20, 20, 40, 0.2);
   mix-blend-mode: multiply;
   z-index: 1;
 }
@@ -56,6 +73,77 @@
 
 .hero-content {
   max-width: 780px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(100% - 3rem);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, calc(-50% + 24px));
+  transition: opacity 0.9s ease, transform 0.9s ease, visibility 0s linear 0.9s;
+}
+
+.hero-content.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.9s ease 0.5s, transform 0.9s ease 0.5s, visibility 0s;
+}
+
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-top: -23px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+
+.hero-arrow:hover {
+  background: #ffffff;
+  color: #111111;
+  border-color: #ffffff;
+}
+
+.hero-arrow-prev { left: 1.5rem; }
+.hero-arrow-next { right: 1.5rem; }
+
+.hero-dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  z-index: 3;
+  display: flex;
+  gap: 0.6rem;
+  transform: translateX(-50%);
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.hero-dot.is-active {
+  width: 32px;
+  background: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .hero-arrow { display: none; }
 }
 
 .hero-badge {
@@ -90,23 +178,21 @@
 .hero-btn-primary {
   display: inline-block;
   padding: 0.8rem 2.25rem;
-  background: var(--color-gold);
-  color: white;
+  background: #ffffff;
+  color: #111111;
   font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
   border: none;
-  border-radius: 9999px;
+  border-radius: 4px;
   text-decoration: none;
   font-family: var(--font-sans);
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 30px rgba(197, 160, 89, 0.35);
+  transition: all 0.2s ease;
 }
 
 .hero-btn-primary:hover {
-  background: var(--color-gold-dark);
-  transform: translateY(-2px);
+  background: #c9a227;
 }
 
 .hero-btn-secondary {
@@ -117,9 +203,9 @@
   font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  border: 1.5px solid rgba(255, 255, 255, 0.7);
-  border-radius: 9999px;
+  letter-spacing: 0.12em;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
   text-decoration: none;
   font-family: var(--font-sans);
   transition: all 0.3s ease;
@@ -128,7 +214,6 @@
 .hero-btn-secondary:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: white;
-  transform: translateY(-2px);
 }
 
 @media (max-width: 640px) {

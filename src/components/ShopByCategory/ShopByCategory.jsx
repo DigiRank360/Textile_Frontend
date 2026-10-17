@@ -158,7 +158,7 @@ const ShopByCategory = () => {
                     to={`/contact?productId=${
                       property._id
                     }&product=${encodeURIComponent(property.title || "")}`}
-                    className="mt-auto flex items-center justify-center gap-2 bg-[#241611] rounded-xl hover:bg-[#c9a227] text-[#f2e9dc] font-medium text-sm py-2.5 transition-colors duration-300"
+                    className="mt-auto flex items-center justify-center gap-2 bg-[#111111] rounded-md hover:bg-[#c9a227] hover:text-[#111111] text-white font-medium text-sm py-2.5 transition-colors duration-200"
                   >
                     <MessageSquareText
                       size={15}
@@ -178,7 +178,7 @@ const ShopByCategory = () => {
           <div className="mt-10 flex justify-center sm:mt-12 lg:mt-14">
             <Link
               to="/properties"
-              className="group inline-flex items-center justify-center gap-2 rounded-full border border-[#2B2420] px-6 py-3 text-sm font-semibold text-[#2B2420] transition-all duration-300 hover:bg-[#2B2420] hover:text-[#E8E0D4] sm:px-8 sm:py-3.5"
+              className="group inline-flex items-center justify-center gap-2 rounded-md border border-[#111111] px-6 py-3 text-sm font-semibold text-[#111111] transition-all duration-200 hover:bg-[#111111] hover:text-white sm:px-8 sm:py-3.5"
             >
               View All Products
 

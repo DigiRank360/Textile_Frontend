@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ChevronDown, Filter, X } from "lucide-react";
 
-import Header from "../components/Header/Header";
 import PageHero from "../components/PageHero/PageHero";
 import ProductSidebar from "../components/ProductSidebar";
 import "../components/PageHero/PageSections.css";
@@ -11,7 +10,7 @@ const ShopLayout = ({
   heroLabel = "Shop",
   heroTitle = "Product Collection",
   heroSubtitle = "Explore our complete product collection.",
-  heroImage = "/heroPage.png",
+  heroImage = "/heroPage.jpg",
 
   products = [],
   categories = [],
@@ -34,7 +33,6 @@ const ShopLayout = ({
 
   return (
     <>
-      <Header disableScrollColor />
 
       <main>
         <PageHero

@@ -4,7 +4,7 @@ import {
   useLocation,
   useNavigate,
 } from "react-router-dom";
-import { Search, Menu, X } from "lucide-react";
+import { Search, Menu, X, ArrowRight } from "lucide-react";
 
 import logo from "../../assets/images/image.png";
 import "./Header.css";
@@ -173,7 +173,7 @@ const Header = ({ disableScrollColor = false }) => {
         >
           <img
             src={logo}
-            alt="Dhoop & Co."
+            alt="Eagle Textile"
             className="header-logo-img"
           />
         </Link>
@@ -235,6 +235,14 @@ const Header = ({ disableScrollColor = false }) => {
                   <X size={15} />
                 </button>
               )}
+
+              <button
+                type="submit"
+                className="header-search-submit"
+                aria-label="Search"
+              >
+                <ArrowRight size={15} />
+              </button>
             </form>
 
             <button

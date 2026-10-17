@@ -279,7 +279,7 @@ const Products = () => {
       heroLabel="Shop"
       heroTitle="Product Collection"
       heroSubtitle="Browse our live product catalog powered by the backend database."
-      heroImage="/heroPage.png"
+      heroImage="/heroPage.jpg"
       products={products}
       categories={categories}
       categoryLoading={categoryLoading}
@@ -311,7 +311,7 @@ const Products = () => {
             <button
               type="button"
               onClick={resetFilters}
-              className="self-start sm:self-auto inline-flex items-center gap-2 rounded-full border border-[#241611]/20 px-4 py-2 text-xs font-medium text-[#241611] hover:bg-[#241611] hover:text-white transition-colors"
+              className="self-start sm:self-auto inline-flex items-center gap-2 rounded-md border border-[#111111]/20 px-4 py-2 text-xs font-medium text-[#111111] hover:bg-[#111111] hover:text-white transition-colors"
             >
               <RotateCcw size={13} />
               Clear Filters
@@ -363,7 +363,7 @@ const Products = () => {
             <button
               type="button"
               onClick={resetFilters}
-              className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#241611] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#c9a227] transition-colors"
+              className="mt-5 inline-flex items-center gap-2 rounded-md bg-[#111111] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#c9a227] hover:text-[#111111] transition-colors"
             >
               <RotateCcw size={15} />
               Clear Filters
@@ -418,7 +418,7 @@ const Products = () => {
                   to={`/contact?productId=${
                     product._id
                   }&product=${encodeURIComponent(productTitle)}`}
-                  className="mt-auto flex w-full items-center justify-center gap-2 rounded-xl bg-[#241611] px-4 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:bg-[#c9a227] active:scale-[0.98]"
+                  className="mt-auto flex w-full items-center justify-center gap-2 rounded-md bg-[#111111] px-4 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-[#c9a227] hover:text-[#111111] active:scale-[0.98]"
                 >
                   <MessageSquareText size={16} />
                   Get Quote

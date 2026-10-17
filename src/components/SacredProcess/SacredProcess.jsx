@@ -1,26 +1,26 @@
 import React from 'react';
-import { Leaf, FlaskConical, Hand, Sun } from 'lucide-react';
+import { Leaf, Shirt, Palette, Sparkles } from 'lucide-react';
 
 const steps = [
   {
     icon: Leaf,
-    title: 'Sourcing',
-    desc: 'We handpick the finest natural herbs, resins, and essential oils from trusted farms across India.',
+    title: 'Yarn Sourcing',
+    desc: 'We select the finest cotton, silk and blended yarns from trusted suppliers across India.',
   },
   {
-    icon: FlaskConical,
-    title: 'Blending',
-    desc: 'Master perfumers create unique fragrance blends using recipes perfected over generations.',
+    icon: Shirt,
+    title: 'Weaving',
+    desc: 'Skilled weavers and modern looms produce fabrics with precise texture, strength and drape.',
   },
   {
-    icon: Hand,
-    title: 'Rolling',
-    desc: 'Each stick is carefully hand-rolled by skilled artisans, ensuring consistent quality and burn.',
+    icon: Palette,
+    title: 'Dyeing & Printing',
+    desc: 'Colour-fast dyes and detailed prints ensure vibrant, long-lasting shades in every batch.',
   },
   {
-    icon: Sun,
-    title: 'Drying',
-    desc: 'Natural sun-drying preserves the purity of ingredients and enhances the lasting fragrance.',
+    icon: Sparkles,
+    title: 'Finishing',
+    desc: 'Every roll is softened, inspected and packed carefully to meet strict quality standards.',
   },
 ];
 
@@ -28,7 +28,7 @@ const SacredProcess = () => {
   return (
     <section className="sacred-process" id="process">
       <div className="section-container">
-        <h2 className="section-title">The Sacred Process</h2>
+        <h2 className="section-title">Our Manufacturing Process</h2>
 
         <div className="process-grid">
           {steps.map((step) => (

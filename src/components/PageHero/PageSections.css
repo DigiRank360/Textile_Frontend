@@ -64,10 +64,10 @@
 
 .category-card .btn-outline {
   margin-left: 20px;
-  border: 1px solid #d4af37;
-  color: #d4af37;
+  border: 1px solid #111111;
+  color: #111111;
   padding: 9px 20px;
-  border-radius: 999px;
+  border-radius: 4px;
   font-size: .78rem;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -76,8 +76,8 @@
 }
 
 .category-card .btn-outline:hover {
-  background: #d4af37;
-  color: #111;
+  background: #111111;
+  color: #fff;
 }
 
 /* ---------- PRODUCTS / FEATURED GRID ---------- */

@@ -35,7 +35,7 @@ const FeaturedProducts = () => {
             Featured Products
           </h2>
           <p className="text-[#6b5f4f] text-base max-w-md mx-auto">
-            Handpicked favourites loved by thousands for their rich, lasting fragrance.
+            Handpicked favourites loved by thousands for their quality, texture and finish.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ const FeaturedProducts = () => {
         <div className="flex justify-center mt-14">
          <Link
   to="/properties"
-  className="inline-flex items-center gap-2 border border-[#241611]/30 text-[#241611] px-7 py-3 rounded-full text-sm font-medium hover:bg-[#241611] hover:text-[#f2e9dc] hover:border-[#241611] transition-colors duration-300"
+  className="inline-flex items-center gap-2 border border-[#111111]/30 text-[#111111] px-7 py-3 rounded-md text-sm font-medium hover:bg-[#111111] hover:text-white hover:border-[#111111] transition-colors duration-200"
 >
   View All Properties
 </Link>

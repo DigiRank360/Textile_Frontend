@@ -13,7 +13,6 @@ import {
   Sparkles,
 } from "lucide-react";
 
-import Header from "../components/Header/Header";
 import PageHero from "../components/PageHero/PageHero";
 import "../components/PageHero/PageSections.css";
 
@@ -30,7 +29,7 @@ const CATEGORIES = [
   },
   {
     id: "ingredients",
-    label: "Ingredients",
+    label: "Materials",
     icon: Leaf,
   },
   {
@@ -49,44 +48,44 @@ const FAQS = [
   {
     id: 1,
     category: "products",
-    question: "What makes Eagle Incense Sticks different?",
+    question: "What makes Eagle Textile different?",
     answer:
-      "Eagle Incense Sticks are crafted with carefully selected ingredients, premium aromatic oils and traditional techniques. Our focus is on balanced fragrance, consistent burning and a pleasant experience for homes, offices and spiritual spaces.",
+      "Eagle Textile fabrics are made with carefully selected yarns, quality dyes and modern finishing techniques. Our focus is on consistent quality, rich colours and a soft feel for fashion, home and commercial use.",
   },
   {
     id: 2,
     category: "ingredients",
-    question: "Are your incense sticks made with natural ingredients?",
+    question: "What materials are your fabrics made from?",
     answer:
-      "We use carefully selected botanical materials, aromatic compounds and fragrance oils chosen for quality and consistency. The ingredients may vary depending on the fragrance collection and product formulation.",
+      "We work with cotton, silk, polyester and blended yarns chosen for quality and consistency. Exact composition varies by fabric collection; please check the product details or contact us.",
   },
   {
     id: 3,
     category: "products",
-    question: "How long does one incense stick burn?",
+    question: "How durable are the fabrics?",
     answer:
-      "The burning time depends on the size, thickness, airflow and surrounding environment. Most incense sticks generally burn for approximately 30 to 45 minutes when used under normal indoor conditions.",
+      "Durability depends on the fibre, weave and finish. Our fabrics are tested for strength and colour fastness, and care instructions help them last longer.",
   },
   {
     id: 4,
     category: "products",
-    question: "Which fragrance is best for meditation and prayer?",
+    question: "Which fabric is best for everyday wear?",
     answer:
-      "Sandalwood, rose, jasmine and traditional devotional fragrances are popular choices for meditation, prayer and spiritual practices. The best option depends on your personal preference and the atmosphere you want to create.",
+      "Cotton and cotton blends are popular for everyday comfort, while silk and silk blends suit festive and occasion wear. The best option depends on your use, season and budget.",
   },
   {
     id: 5,
     category: "products",
-    question: "Can I use incense sticks every day?",
+    question: "How should I care for the fabrics?",
     answer:
-      "Yes, incense sticks can be used as part of a daily prayer, meditation or relaxation routine. Always use them in a well-ventilated space and place them securely in a suitable incense holder.",
+      "Follow the care instructions for each fabric. In general, wash delicate fabrics gently in cold water, avoid harsh detergents and dry in the shade to preserve colour and texture.",
   },
   {
     id: 6,
     category: "ingredients",
-    question: "Do your incense sticks contain harmful chemicals?",
+    question: "Are your dyes safe and colour-fast?",
     answer:
-      "Our products are manufactured with a strong focus on quality and responsible formulation. For specific ingredient, allergy or sensitivity concerns, please contact our team before placing an order.",
+      "Our products are manufactured with a strong focus on quality and responsible dyeing. For specific dye, allergy or sensitivity concerns, please contact our team before placing an order.",
   },
   {
     id: 7,
@@ -164,14 +163,13 @@ const Faq = () => {
 
   return (
     <>
-      <Header disableScrollColor />
 
       <main>
         <PageHero
           label="Frequently Asked Questions"
           title="How Can We Help You?"
-          subtitle="Find clear answers about our incense products, ingredients, orders, delivery and payment process."
-          image="/heroPage.png"
+          subtitle="Find clear answers about our fabrics, materials, orders, delivery and payment process."
+          image="/heroPage.jpg"
         />
 
         <section className="overflow-hidden bg-[#fbf8f2] py-20 lg:py-28">
@@ -270,7 +268,7 @@ const Faq = () => {
 
                     <Link
                       to="/contact"
-                      className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#c9a227] px-6 py-3.5 text-sm font-semibold text-[#241611] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl"
+                      className="mt-8 inline-flex items-center gap-2 rounded-md bg-white px-6 py-3.5 text-sm font-semibold text-[#111111] transition-all duration-200 hover:bg-[#c9a227]"
                     >
                       Contact Our Team
                       <ArrowRight size={17} />
@@ -395,7 +393,7 @@ const Faq = () => {
                         setActiveCategory("all");
                         setActiveFaq(FAQS[0]?.id || null);
                       }}
-                      className="mt-6 rounded-full bg-[#241611] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#c9a227] hover:text-[#241611]"
+                      className="mt-6 rounded-md bg-[#111111] px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-[#c9a227] hover:text-[#111111] hover:text-white"
                     >
                       Reset Search
                     </button>
@@ -414,21 +412,21 @@ const Faq = () => {
 
               <div className="relative mx-auto max-w-3xl">
                 <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#c9a227]">
-                  Discover Eagle Fragrances
+                  Discover Eagle Textile
                 </span>
 
                 <h2 className="mt-5 font-serif text-3xl font-semibold leading-tight text-[#241611] sm:text-4xl lg:text-5xl">
-                  Find the Perfect Fragrance for Every Moment
+                  Find the Perfect Fabric for Every Need
                 </h2>
 
                 <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[#6b5f4f]">
-                  Explore our range of carefully crafted incense sticks created
-                  for prayer, meditation, relaxation and everyday freshness.
+                  Explore our range of carefully crafted fabrics created
+                  for fashion, home furnishing and everyday comfort.
                 </p>
 
                 <Link
                   to="/products"
-                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#241611] px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#c9a227] hover:text-[#241611] hover:shadow-xl"
+                  className="mt-8 inline-flex items-center gap-2 rounded-md bg-[#111111] px-8 py-4 text-sm font-semibold text-white transition-all duration-200 hover:bg-[#c9a227] hover:text-[#111111] hover:text-white"
                 >
                   Explore Our Products
                   <ArrowRight size={18} />

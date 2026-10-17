@@ -25,7 +25,6 @@ import {
   Landmark,
 } from "lucide-react";
 
-import Header from "../components/Header/Header";
 import PageHero from "../components/PageHero/PageHero";
 import "../components/PageHero/PageSections.css";
 
@@ -33,9 +32,9 @@ import "../components/PageHero/PageSections.css";
    COMPANY DETAILS
 ===================================================== */
 
-const COMPANY_NAME = "Eagle Incense Sticks";
-const WEBSITE = "https://eagleincensesticks.com";
-const LEGAL_EMAIL = "info@eagleincensesticks.com";
+const COMPANY_NAME = "Eagle Textile";
+const WEBSITE = "https://hummotextile.com";
+const LEGAL_EMAIL = "eaglefabrichub@gmail.com";
 const PHONE_NUMBER = "+91 99819 97440";
 const PHONE_LINK = "+919981997440";
 
@@ -194,11 +193,10 @@ const TERMS_SECTIONS = [
         <p>
           These Terms of Service (“Terms”) govern all quotations,
           purchase orders, domestic and export sales, product enquiries
-          and commercial transactions between {COMPANY_NAME} (“Eagle
-          Incense Sticks”, “we”, “us” or “our”) and any customer, buyer,
+          and commercial transactions between {COMPANY_NAME} (“Eagle Textile”, “we”, “us” or “our”) and any customer, buyer,
           importer, distributor, wholesaler, retailer or trading entity
-          purchasing or requesting our incense sticks, agarbatti, dhoop
-          products, fragrances, packaging or related products (“Buyer”,
+          purchasing or requesting our fabrics, textiles, garments
+          products, designs, packaging or related products (“Buyer”,
           “you” or “your”).
         </p>
 
@@ -235,12 +233,12 @@ const TERMS_SECTIONS = [
 
         <TermsList
           items={[
-            "An order is confirmed only after written acceptance by Eagle Incense Sticks and, where applicable, issuance of a quotation or Proforma Invoice.",
-            "Product names, fragrances, quantities, sizes, packaging details, delivery details and product codes must match the accepted quotation or Proforma Invoice.",
+            "An order is confirmed only after written acceptance by Eagle Textile and, where applicable, issuance of a quotation or Proforma Invoice.",
+            "Product names, designs, quantities, sizes, packaging details, delivery details and product codes must match the accepted quotation or Proforma Invoice.",
             "Any discrepancy in a quotation or Proforma Invoice must be reported within 48 hours of issuance.",
-            "Minimum order quantities may vary depending on the product, fragrance, packaging, private-labelling requirement and destination.",
-            "Mixed products or fragrances may be permitted subject to production, packaging and availability.",
-            "Eagle Incense Sticks reserves the right to decline or cancel an unconfirmed order without liability.",
+            "Minimum order quantities may vary depending on the product, design, packaging, private-labelling requirement and destination.",
+            "Mixed products or designs may be permitted subject to production, packaging and availability.",
+            "Eagle Textile reserves the right to decline or cancel an unconfirmed order without liability.",
           ]}
         />
 
@@ -284,11 +282,11 @@ const TERMS_SECTIONS = [
 
         <TermsList
           items={[
-            "Payments must be made only to the bank account or authorised payment method specified by Eagle Incense Sticks.",
+            "Payments must be made only to the bank account or authorised payment method specified by Eagle Textile.",
             "Production may begin only after the required advance payment has been received, cleared and verified.",
             "Any remaining balance must be paid according to the terms stated in the quotation or Proforma Invoice.",
             "All bank charges, transfer charges, transaction fees, intermediary-bank fees and currency-conversion costs are borne by the Buyer unless agreed otherwise.",
-            "Eagle Incense Sticks is not responsible for production or delivery delays caused by incomplete, withheld, failed or incorrectly transferred payments.",
+            "Eagle Textile is not responsible for production or delivery delays caused by incomplete, withheld, failed or incorrectly transferred payments.",
           ]}
         />
 
@@ -300,8 +298,7 @@ const TERMS_SECTIONS = [
             />
 
             <p className="text-sm leading-7 text-amber-900/80">
-              Buyers should verify banking details directly with Eagle
-              Incense Sticks before transferring funds. We are not
+              Buyers should verify banking details directly with Eagle Textile before transferring funds. We are not
               responsible for payments sent to fraudulent, incorrect or
               unauthorised accounts.
             </p>
@@ -320,7 +317,7 @@ const TERMS_SECTIONS = [
       <>
         <p>
           Production and delivery schedules depend on product quantity,
-          fragrance, packaging, raw-material availability, customisation
+          design, packaging, raw-material availability, customisation
           requirements and the delivery destination.
         </p>
 
@@ -329,7 +326,7 @@ const TERMS_SECTIONS = [
         <TermsList
           items={[
             "Estimated production or dispatch dates are provided in good faith and are not guaranteed unless expressly confirmed in writing.",
-            "Custom fragrances, private-label packaging and OEM orders may require additional production time.",
+            "Custom designs, private-label packaging and OEM orders may require additional production time.",
             "Production timelines begin after the required advance payment and final artwork, packaging or product approval have been received.",
             "Changes requested after production begins may result in additional charges and revised delivery dates.",
           ]}
@@ -372,19 +369,19 @@ const TERMS_SECTIONS = [
 
         <TermsList
           items={[
-            "The Buyer must review product specifications, fragrance, colour, quantity, size and packaging information before confirming an order.",
+            "The Buyer must review product specifications, design, colour, quantity, size and packaging information before confirming an order.",
             "Pre-shipment inspection may be arranged for qualifying wholesale or export orders where mutually agreed.",
             "Any third-party inspection cost will be borne by the Buyer unless agreed otherwise.",
             "Acceptance during pre-shipment inspection does not remove the Buyer’s obligation to inspect goods promptly after delivery.",
-            "Product appearance may vary slightly between batches because of natural ingredients, fragrance oils, raw materials and manufacturing conditions.",
+            "Product appearance may vary slightly between batches because of natural fibres, dyes, raw materials and manufacturing conditions.",
           ]}
         />
 
-        <TermsSubheading title="Fragrance and Appearance Variations" />
+        <TermsSubheading title="Colour and Appearance Variations" />
 
         <p>
-          Incense sticks, agarbatti and dhoop products may exhibit minor
-          differences in fragrance intensity, shade, texture, thickness,
+          Textile products may exhibit minor
+          differences in shade, texture, thickness,
           burning duration or surface appearance between production
           batches.
         </p>
@@ -470,24 +467,24 @@ const TERMS_SECTIONS = [
       <>
         <p>
           Buyers and end users are responsible for using and storing
-          incense products safely and according to the instructions
+          textile products safely and according to the instructions
           provided on the packaging.
         </p>
 
         <TermsList
           items={[
-            "Incense products must be kept away from children, pets and flammable materials.",
-            "Products must be burned only in a suitable incense holder on a stable, heat-resistant surface.",
-            "Burning incense must never be left unattended.",
-            "Products should be used in a properly ventilated area.",
+            "Textile products must be kept away from open flames, heat sources and flammable materials.",
+            "Products must be washed, ironed and handled according to the care instructions provided.",
+            "Fabrics must not be exposed to harsh chemicals, bleach or excessive heat unless specified.",
+            "Products should be inspected before cutting or stitching, as claims after use may not be accepted.",
             "Products must be stored in a cool, dry location away from direct sunlight, moisture and excessive heat.",
             "The Buyer must ensure that any resale packaging includes applicable safety, product-use and regulatory information.",
           ]}
         />
 
         <p>
-          {COMPANY_NAME} is not responsible for damage, fire, injury,
-          fragrance deterioration or reduced product performance caused
+          {COMPANY_NAME} is not responsible for damage, injury,
+          quality deterioration or reduced product performance caused
           by improper use, storage, handling or resale.
         </p>
       </>
@@ -502,7 +499,7 @@ const TERMS_SECTIONS = [
     content: (
       <>
         <p>
-          All product photographs, fragrance concepts, designs,
+          All product photographs, design concepts, designs,
           catalogues, website content, packaging concepts, trademarks,
           logos, graphics and commercial materials belonging to{" "}
           {COMPANY_NAME} remain our intellectual property unless
@@ -552,7 +549,7 @@ const TERMS_SECTIONS = [
         <TermsList
           items={[
             "Pricing, quotations and discount structures",
-            "Product formulations, fragrances and specifications",
+            "Product formulations, designs and specifications",
             "Samples and production information",
             "Packaging and private-labelling requirements",
             "Customer, supplier and distributor information",
@@ -724,8 +721,7 @@ const TERMS_SECTIONS = [
       <>
         <p>
           For questions, legal notices, order concerns or enquiries
-          relating to these Terms and Conditions, contact Eagle Incense
-          Sticks using the following details:
+          relating to these Terms and Conditions, contact Eagle Textile using the following details:
         </p>
 
         <div className="grid gap-4 sm:grid-cols-2">
@@ -753,7 +749,7 @@ const TERMS_SECTIONS = [
           <ContactDetail
             icon={Globe2}
             label="Website"
-            value="eagleincensesticks.com"
+            value="hummotextile.com"
             href={WEBSITE}
           />
 
@@ -792,14 +788,13 @@ const TermNcondition = () => {
 
   return (
     <>
-      <Header disableScrollColor />
 
       <main>
         <PageHero
           label="Legal Information"
           title="Terms & Conditions"
-          subtitle="Review the terms governing product enquiries, quotations, payments, orders, production, delivery and commercial transactions with Eagle Incense Sticks."
-          image="/heroPage.png"
+          subtitle="Review the terms governing product enquiries, quotations, payments, orders, production, delivery and commercial transactions with Eagle Textile."
+          image="/heroPage.jpg"
         />
 
         {/*
@@ -831,7 +826,7 @@ const TermNcondition = () => {
                   <p className="mt-5 max-w-3xl text-sm leading-7 text-white/65 sm:text-base">
                     These Terms govern quotations, purchase orders,
                     payments, production, quality, delivery and
-                    commercial transactions between Eagle Incense Sticks
+                    commercial transactions between Eagle Textile
                     and its customers, wholesalers, importers and
                     distributors.
                   </p>
@@ -983,7 +978,7 @@ const TermNcondition = () => {
                     confirming a Proforma Invoice or making payment, the
                     Buyer confirms acceptance of these Terms and
                     Conditions. Conflicting Buyer terms will not apply
-                    unless expressly accepted by Eagle Incense Sticks in
+                    unless expressly accepted by Eagle Textile in
                     writing.
                   </p>
                 </div>
@@ -1028,7 +1023,7 @@ const TermNcondition = () => {
                 </span>
 
                 <h2 className="mt-5 font-serif text-3xl font-semibold leading-tight text-white sm:text-4xl">
-                  Contact Eagle Incense Sticks
+                  Contact Eagle Textile
                 </h2>
 
                 <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/65 sm:text-base">
@@ -1040,7 +1035,7 @@ const TermNcondition = () => {
                 <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#c9a227] px-7 py-4 text-sm font-semibold text-[#241611] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl"
+                    className="inline-flex items-center gap-2 rounded-md bg-white px-7 py-4 text-sm font-semibold text-[#111111] transition-all duration-200 hover:bg-[#c9a227]"
                   >
                     Contact Our Team
                     <ArrowRight size={18} />
@@ -1048,7 +1043,7 @@ const TermNcondition = () => {
 
                   <a
                     href={`mailto:${LEGAL_EMAIL}`}
-                    className="inline-flex items-center gap-2 rounded-full border border-white/20 px-7 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-[#241611]"
+                    className="inline-flex items-center gap-2 rounded-md border border-white/20 px-7 py-4 text-sm font-semibold text-white transition-all duration-200 hover:border-white hover:bg-[#c9a227] hover:text-[#111111] hover:text-[#241611]"
                   >
                     <Mail size={18} />
                     Email Us
@@ -1056,7 +1051,7 @@ const TermNcondition = () => {
 
                   <a
                     href={`tel:${PHONE_LINK}`}
-                    className="inline-flex items-center gap-2 rounded-full border border-white/20 px-7 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-[#241611]"
+                    className="inline-flex items-center gap-2 rounded-md border border-white/20 px-7 py-4 text-sm font-semibold text-white transition-all duration-200 hover:border-white hover:bg-[#c9a227] hover:text-[#111111] hover:text-[#241611]"
                   >
                     <Phone size={18} />
                     Call Us

@@ -84,7 +84,7 @@ function App() {
 
                   <a
                     href="/"
-                    className="rounded-md bg-[#c9a227] px-6 py-3 font-semibold text-[#241611]"
+                    className="rounded-md bg-[#111111] px-6 py-3 font-semibold text-white hover:bg-[#c9a227] hover:text-[#111111]"
                   >
                     Go to Home
                   </a>

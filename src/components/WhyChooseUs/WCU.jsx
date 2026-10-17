@@ -9,21 +9,21 @@ import {
 const features = [
   {
     icon: <Leaf size={34} />,
-    title: "Natural Ingredients",
+    title: "Quality Materials",
     description:
-      "Crafted using carefully selected natural ingredients and premium fragrances for a soothing spiritual experience.",
+      "Made from carefully selected yarns and fibres for a soft feel, durability and comfort.",
   },
   {
     icon: <Award size={34} />,
     title: "Premium Quality",
     description:
-      "Every incense stick is manufactured with strict quality standards to deliver long-lasting aroma and consistent performance.",
+      "Every fabric goes through strict quality checks for colour fastness, strength and consistent finish.",
   },
   {
     icon: <ShieldCheck size={34} />,
     title: "Trusted Brand",
     description:
-      "Loved by families, temples and retailers for our commitment to purity, fragrance and customer satisfaction.",
+      "Trusted by designers, retailers and wholesale buyers for our commitment to quality and customer satisfaction.",
   },
   {
     icon: <Truck size={34} />,
@@ -45,16 +45,16 @@ const WCU = () => {
           </span>
 
           <h2 className="mt-5 text-4xl font-bold text-[#1a221a] md:text-5xl">
-            Experience the Essence of
+            Discover the Finest in
             <span className="block text-[#c9a227]">
-              Premium Incense
+              Premium Textiles
             </span>
           </h2>
 
           <p className="mt-5 text-[15px] leading-7 text-[#6c665f]">
-            At Eagle Incense Sticks, we combine traditional craftsmanship
-            with premium fragrances to create incense that brings peace,
-            positivity and elegance into every space.
+            At Eagle Textile, we combine traditional craftsmanship
+            with modern manufacturing to create fabrics that bring
+            comfort, colour and elegance to every creation.
           </p>
         </div>
 
@@ -85,13 +85,12 @@ const WCU = () => {
 
         <div className="mt-16 rounded-[30px] bg-[#1a221a] px-8 py-10 text-center">
           <h3 className="text-3xl font-bold text-white">
-            Crafted with Devotion. Shared with Trust.
+            Crafted with Care. Delivered with Trust.
           </h3>
 
           <p className="mx-auto mt-4 max-w-3xl text-[#d6c9b6]">
-            From daily prayers to festive celebrations, Eagle Incense Sticks
-            fills every moment with purity, calming fragrance and timeless
-            tradition.
+            From everyday wear to festive collections and bulk orders, Eagle Textile
+            delivers fabrics with reliable quality, rich texture and timeless style.
           </p>
         </div>
       </div>

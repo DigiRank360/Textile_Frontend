@@ -58,7 +58,7 @@ const Contact = () => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   const businessPhone = "919981997440";
-  const businessEmail = "info@eagleincensesticks.com";
+  const businessEmail = "eaglefabrichub@gmail.com";
 
   const businessAddress =
     "A-182 English Villas, Kolar Road, Bhopal, Madhya Pradesh 462042 (India)";
@@ -68,7 +68,7 @@ const Contact = () => {
   const whatsappMessage = encodeURIComponent(
     productName
       ? `Hello, I would like to get a quote for ${productName}.`
-      : "Hello, I would like to know more about your incense products.",
+      : "Hello, I would like to know more about your textile products.",
   );
 
   useEffect(() => {
@@ -280,9 +280,9 @@ const Contact = () => {
         subtitle={
           productName
             ? "Share your requirement and our team will provide product details, pricing and availability."
-            : "Contact our team for product information, bulk orders, custom fragrances or business enquiries."
+            : "Contact our team for product information, bulk orders, custom fabrics or business enquiries."
         }
-        image="/heroPage.png"
+        image="/heroPage.jpg"
       />
 
       <main className="bg-[#fbf8f2]">
@@ -297,7 +297,7 @@ const Contact = () => {
                 </span>
 
                 <h2 className="mb-5 max-w-xl font-serif text-3xl font-semibold leading-tight text-[#241611] md:text-4xl">
-                  Let’s Find the Perfect Fragrance for You
+                  Let’s Find the Perfect Fabric for You
                 </h2>
 
                 <p className="mb-8 max-w-xl text-base leading-7 text-[#6b5f4f]">
@@ -511,7 +511,7 @@ const Contact = () => {
                       placeholder={
                         productName
                           ? "Mention quantity, packaging or product requirement *"
-                          : "Tell us about your product or fragrance requirement *"
+                          : "Tell us about your product or fabric requirement *"
                       }
                       className={`${inputClass} resize-none pt-3.5`}
                       value={formData.message}
@@ -525,9 +525,9 @@ const Contact = () => {
                     disabled={isSubmitting}
                     className="
                       flex w-full items-center justify-center gap-2
-                      rounded-xl bg-[#241611] py-4 text-sm font-semibold
-                      text-[#f5efe3] transition-all duration-300
-                      hover:bg-[#3b2921] hover:shadow-lg
+                      rounded-md bg-[#111111] py-4 text-sm font-semibold
+                      text-white transition-all duration-200
+                      hover:bg-[#c9a227] hover:text-[#111111]
                       disabled:cursor-not-allowed disabled:opacity-60
                     "
                   >
@@ -605,10 +605,10 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
-                      inline-flex w-fit items-center gap-2 rounded-xl
-                      bg-[#c9a227] px-5 py-3 text-sm font-semibold
-                      text-[#241611] transition-all duration-300
-                      hover:bg-[#d8b632]
+                      inline-flex w-fit items-center gap-2 rounded-md
+                      bg-[#111111] px-5 py-3 text-sm font-semibold
+                      text-white transition-all duration-200
+                      hover:bg-[#c9a227] hover:text-[#111111]
                     "
                   >
                     Get Directions
@@ -619,7 +619,7 @@ const Contact = () => {
                 {/* Google Maps Embed */}
                 <div className="h-[380px] w-full lg:h-[440px]">
                   <iframe
-                    title="Eagle Incense Sticks Location"
+                    title="Eagle Textile Location"
                     src={`https://www.google.com/maps?q=${mapAddress}&output=embed`}
                     width="100%"
                     height="100%"

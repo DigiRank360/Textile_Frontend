@@ -2,3 +2,35 @@
 
 /* Admin panel uses its own styles — frontend uses home.css theme */
 @import "tailwindcss";
+/* Global polish */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #c9a227;
+  color: #241611;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+button {
+  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease,
+    transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+:focus-visible {
+  outline: 2px solid #c9a227;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

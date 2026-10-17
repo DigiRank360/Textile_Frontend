@@ -47,7 +47,7 @@ const EnquiryForm = () => {
 
   const contactDetails = [
     { icon: PhoneIcon, label: 'Phone', value: '+91 98765 43210' },
-    { icon: MailIcon, label: 'Email', value: 'info@sanwariyavatika.com' },
+    { icon: MailIcon, label: 'Email', value: 'eaglefabrichub@gmail.com' },
     { icon: MapPinIcon, label: 'Address', value: 'Mumbai, India' },
   ];
 
@@ -148,7 +148,7 @@ const EnquiryForm = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full flex items-center justify-center gap-2 bg-[#2B2420] hover:bg-[#3a3128] disabled:opacity-60 text-[#E8E0D4] font-medium text-sm py-3 rounded-lg transition-colors"
+            className="w-full flex items-center justify-center gap-2 bg-[#111111] hover:bg-[#c9a227] hover:text-[#111111] disabled:opacity-60 text-white font-medium text-sm py-3 rounded-md transition-colors"
           >
             {isSubmitting ? (
               'Sending...'

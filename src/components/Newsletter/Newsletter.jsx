@@ -17,9 +17,9 @@ const Newsletter = () => {
     <section className="newsletter" id="newsletter">
       <div className="section-container">
         <span className="section-label">Stay in Connection</span>
-        <h2 className="newsletter-title">Join the Ritual</h2>
+        <h2 className="newsletter-title">Join Eagle Textile</h2>
         <p className="newsletter-desc">
-          Subscribe to our newsletter for exclusive offers, new fragrance launches, and spiritual wellness tips.
+          Subscribe to our newsletter for exclusive offers, new fabric launches and textile trends.
         </p>
 
         <form className="newsletter-form" onSubmit={handleSubmit}>
